@@ -1,0 +1,103 @@
+<header class="header-container border-bottom">
+  <div class="top-bar">
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="mobile-sidebar-background" [class.visible]="mobileMenuVisible" (click)="toggleMenu()"></div>
+    <div class="logo">
+      <a routerLink="/inicio">
+        <img src="assets/img/logos/logo-coonadoc.png" alt="Logo Coonadoc">
+      </a>
+    </div>
+  </div>
+  <div class="mobile-sidebar" [class.visible]="mobileMenuVisible">
+    <button class="close-sidebar" (click)="toggleMenu()">
+      <i class="bi bi-x-lg"></i>
+    </button>
+    <nav class="nav-wrapper">
+      <ul id="nav">
+        <li class="nav-list"><a routerLink="/inicio" routerLinkActive="active-link">Inicio</a></li>
+        <li class="nav-list dropdown">
+          <div class="dropdown-content-wrapper">
+            <a routerLink="/conocenos" routerLinkActive="active-link" (click)="$event.stopPropagation()">Conócenos</a>
+            <button class="toggle-submenu bi bi-caret-down-fill" [class.rotated]="submenusVisible['/conocenos']"
+              (click)="toggleSubmenu('/conocenos'); $event.stopPropagation()"></button>
+          </div>
+          <ul class="dropdown-menu" [class.visible]="submenusVisible['/conocenos']">
+            <li><a routerLink="/conocenos/quienes-somos" routerLinkActive="active-link">Quiénes somos</a></li>
+            <li><a routerLink="/conocenos/politicas" routerLinkActive="active-link">Políticas</a></li>
+            <li><a routerLink="/conocenos/pqrsdf" routerLinkActive="active-link">PQRSDF</a></li>
+          </ul>
+        </li>
+        <li class="nav-list dropdown">
+          <div class="dropdown-content-wrapper">
+            <a routerLink="/servicios" routerLinkActive="active-link" (click)="$event.stopPropagation()">Servicios</a>
+            <button class="toggle-submenu bi bi-caret-down-fill" [class.rotated]="submenusVisible['/servicios']"
+              (click)="toggleSubmenu('/servicios'); $event.stopPropagation()"></button>
+          </div>
+          <ul class="dropdown-menu" [class.visible]="submenusVisible['/servicios']">
+            <li><a routerLink="/servicios/creditos" routerLinkActive="active-link">Créditos</a></li>
+            <li><a routerLink="/servicios/educacion" routerLinkActive="active-link">Educación</a></li>
+            <li><a routerLink="/servicios/turismo" routerLinkActive="active-link">Turismo</a></li>
+            <li><a routerLink="/servicios/auxilios" routerLinkActive="active-link">Auxilios</a></li>
+            <li><a routerLink="/servicios/seguros" routerLinkActive="active-link">Seguros</a></li>
+            <li><a routerLink="/servicios/convenios" routerLinkActive="active-link">Convenios</a></li>
+            <li><a routerLink="/servicios/clasificados" routerLinkActive="active-link">Clasificados</a></li>
+          </ul>
+        </li>
+        <li class="nav-list"><a routerLink="/afiliacion" routerLinkActive="active-link">Afiliación</a></li>
+        <li class="nav-list dropdown">
+          <div class="dropdown-content-wrapper">
+            <a routerLink="/herramientas" routerLinkActive="active-link" (click)="$event.stopPropagation()">Herramientas
+              en
+              Línea</a>
+            <button class="toggle-submenu bi bi-caret-down-fill" [class.rotated]="submenusVisible['/herramientas']"
+              (click)="toggleSubmenu('/herramientas'); $event.stopPropagation()"></button>
+          </div>
+          <ul class="dropdown-menu" [class.visible]="submenusVisible['/herramientas']">
+            <li><a routerLink="/herramientas/app" routerLinkActive="active-link">App Coonadoc</a></li>
+            <li><a routerLink="/herramientas/oficina" routerLinkActive="active-link">Oficina Virtual</a></li>
+            <li><a routerLink="/herramientas/campus" routerLinkActive="active-link">Campus</a></li>
+          </ul>
+        </li>
+        <li class="nav-list"><a routerLink="/pagos" routerLinkActive="active-link">Pagos</a></li>
+        <li class="nav-list"><a routerLink="/contacto" routerLinkActive="active-link">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </div>
+  <nav class="desktop-nav nav-wrapper">
+    <ul id="nav">
+      <li class="nav-list"><a routerLink="/inicio" routerLinkActive="active-link">Inicio</a></li>
+      <li class="nav-list dropdown"> <a routerLink="/conocenos" routerLinkActive="active-link">Conócenos</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/conocenos/quienes-somos" routerLinkActive="active-link">Quiénes somos</a></li>
+          <li><a routerLink="/conocenos/politicas" routerLinkActive="active-link">Políticas</a></li>
+          <li><a routerLink="/conocenos/pqrsdf" routerLinkActive="active-link">PQRSDF</a></li>
+        </ul>
+      </li>
+      <li class="nav-list dropdown"> <a routerLink="/servicios" routerLinkActive="active-link">Servicios</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/servicios/creditos" routerLinkActive="active-link">Créditos</a></li>
+          <li><a routerLink="/servicios/educacion" routerLinkActive="active-link">Educación</a></li>
+          <li><a routerLink="/servicios/turismo" routerLinkActive="active-link">Turismo</a></li>
+          <li><a routerLink="/servicios/auxilios" routerLinkActive="active-link">Auxilios</a></li>
+          <li><a routerLink="/servicios/seguros" routerLinkActive="active-link">Seguros</a></li>
+          <li><a routerLink="/servicios/convenios" routerLinkActive="active-link">Convenios</a></li>
+          <li><a routerLink="/servicios/clasificados" routerLinkActive="active-link">Clasificados</a></li>
+        </ul>
+      </li>
+      <li class="nav-list"><a routerLink="/afiliacion" routerLinkActive="active-link">Afiliación</a></li>
+      <li class="nav-list dropdown"> <a routerLink="/herramientas" routerLinkActive="active-link">Herramientas en
+          Línea</a>
+        <ul class="dropdown-menu">
+          <li><a routerLink="/herramientas/app" routerLinkActive="active-link">App Coonadoc</a></li>
+          <li><a routerLink="/herramientas/oficina" routerLinkActive="active-link">Oficina Virtual</a></li>
+          <li><a routerLink="/herramientas/campus" routerLinkActive="active-link">Campus</a></li>
+        </ul>
+      </li>
+      <li class="nav-list"><a routerLink="/pagos" routerLinkActive="active-link">Pagos</a></li>
+      <li class="nav-list"><a routerLink="/contacto" routerLinkActive="active-link">Contáctanos</a></li>
+
+    </ul>
+  </nav>
+</header>

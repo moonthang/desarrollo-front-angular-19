@@ -1,0 +1,469 @@
+/* ==================== */
+/* ESTILOS DEL CARRUSEL */
+/* ==================== */
+
+.slide-indicator {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--color-secundario);
+    position: relative;
+    z-index: 10;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 12px solid var(--color-secundario);
+    animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+.carousel-indicators.bottom-indicators {
+    position: absolute;
+    bottom: 30px;
+}
+
+.carousel-indicators button {
+    width: 14px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #c8e6c9;
+    margin: 0 4px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-secundario);
+    width: 30px;
+}
+
+#customCarousel {
+    height: 350px;
+}
+@media (min-width: 768px) {
+    #customCarousel { height: auto; }
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ==================== */
+/* ESTILOS DE SERVICIOS */
+/* ==================== */
+
+.services-section {
+    background-color: var(--color-oscuro);
+    position: relative;
+  }
+  
+  .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-claro);;
+  }
+  
+  .section-descr-title {
+    color: var(--color-claro);
+    font-size: 1rem;
+  }
+
+  .btn-slider {
+    background-color: var(--color-claro);
+    border: 2px solid var(--color-claro);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-slider:hover {
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    border-color: var(--color-principal);
+  }
+  
+  .services-wrapper {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .services-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .services-track {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0 20px 0;
+  }
+  
+  .service-card {
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px;
+    min-width: 380px;
+    min-height: 470px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-icon {
+    width: 85px;
+    height: 85px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--color-principal);
+    font-size: 3rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: #2d2d2d;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .service-card h3 :hover{
+    text-decoration: underline;
+  }
+  
+  .service-card p {
+    color: #666;
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .btn-slider {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
+  
+    .services-track {
+      gap: 12px;
+    }
+  
+    .service-card {
+      min-width: 280px;
+      min-height: 400px;
+      padding: 20px;
+      border-radius: 30px;
+    }
+  
+    .card-icon {
+      width: 60px;
+      height: 60px;
+      font-size: 2rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.4rem;
+    }
+  
+    .service-card p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    .btn-slider {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+    }
+  
+    .services-track {
+      gap: 16px;
+    }
+  
+    .service-card {
+      min-width: 320px;
+      min-height: 450px;
+      padding: 25px;
+    }
+  
+    .card-icon {
+      width: 70px;
+      height: 70px;
+      font-size: 2.2rem;
+    }
+  
+    .service-card h3 {
+      font-size: 1.6rem;
+    }
+  
+    .service-card p {
+      font-size: 1.1rem;
+    }
+  }
+
+/* ================= */
+/* EMPRESAS ALIADAS */
+/* ================= */
+
+.carousel-inner-emp {
+  padding: 20px 0;
+}
+
+.carousel-item-emp {
+  padding: 20px 0;
+}
+
+.carousel-item-emp img {
+  max-height: 70px;
+  max-width: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.carousel-item-emp img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+
+
+#carouselEmpresas .carousel-control-prev-icon,
+#carouselEmpresas .carousel-control-next-icon {
+  background-color: var(--color-principal);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-size: 50% 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#carouselEmpresas .carousel-control-prev,
+#carouselEmpresas .carousel-control-next {
+  width: 5%;
+}
+
+
+.aliadas-badge {
+  background-color: var(--color-secundario);
+  color: white;
+  padding: 0.35em 0.65em;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* ================= */
+/* ESTILOS DEL FAQ */
+/* ================= */
+
+.faq-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.contact-prompt {
+    position: sticky;
+    top: 20px;
+    padding-right: 30px;
+}
+
+.contact-prompt p {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-contact {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 15px 50px;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1.3rem;
+}
+.btn-contact:hover {
+    background-color: var(--color-principal-claro);
+    transform: translateY(-2px);
+}
+
+.accordion-item {
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+
+.accordion-button {
+    background-color: transparent;
+    font-weight: 500;
+    color: #2d2d2d;
+    font-size: 1.3rem;
+    box-shadow: none !important;
+    padding-left: 0;
+    padding-right: 2.5rem !important;
+    position: relative;
+}
+
+.accordion-button::after {
+    display: none !important;
+    background-image: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin-left: 0 !important;
+    content: '' !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #2d2d2d;
+}
+
+.accordion-body {
+    padding: 15px 0 25px 0;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.accordion-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 5px 0;
+}
+
+.accordion-button .bi {
+    transition: transform 0.3s ease;
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+}
+.accordion-button:not(.collapsed) .bi {
+    transform: rotate(180deg);
+}
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+    .faq-title {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  
+    .contact-prompt {
+      padding-right: 0;
+      position: relative;
+      top: auto;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .contact-prompt p {
+      font-size: 1.1rem;
+    }
+  
+    .btn-contact {
+      padding: 12px 40px;
+      font-size: 1.1rem;
+    }
+  
+    .accordion-button {
+      font-size: 1.2rem;
+      padding-right: 2rem !important;
+    }
+  
+    .accordion-body {
+      font-size: 1rem;
+    }
+  
+    .accordion-button .bi {
+      font-size: 0.95rem;
+      right: 0.8rem;
+    }
+  }
+  
+  /* Celulares (≤ 576px) */
+  @media (max-width: 576px) {
+    .faq-title {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .contact-prompt p {
+      font-size: 1rem;
+    }
+  
+    .btn-contact {
+      padding: 10px 30px;
+      font-size: 1rem;
+    }
+  
+    .accordion-button {
+      font-size: 1.1rem;
+      padding-right: 1.5rem !important;
+    }
+  
+    .accordion-body {
+      font-size: 0.95rem;
+    }
+  
+    .accordion-button .bi {
+      font-size: 0.9rem;
+      right: 0.6rem;
+    }
+  }
+  
+/* ============ */
+/* CLASIFICADOS */
+/* ============ */
