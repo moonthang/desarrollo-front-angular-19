@@ -14,11 +14,9 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.mobileMenuVisible = !this.mobileMenuVisible;
-    // Bloquear scroll cuando el menú está abierto
     document.body.style.overflow = this.mobileMenuVisible ? 'hidden' : '';
   }
 
-  // Cerrar menú al hacer clic fuera o al cambiar de ruta
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
@@ -27,7 +25,6 @@ export class HeaderComponent {
     }
   }
 
-  // Cerrar menú al redimensionar la pantalla si pasa el breakpoint
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     if (window.innerWidth > 992 && this.mobileMenuVisible) {
