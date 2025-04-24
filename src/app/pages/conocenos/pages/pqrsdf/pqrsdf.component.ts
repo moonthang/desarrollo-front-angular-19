@@ -57,7 +57,6 @@ export class PqrsdfComponent {
         formData.append('archivo', this.archivo);
       }
 
-      // Aquí enviarías el formData a la API con HttpClient
       console.log('Formulario enviado:', formData);
     }
   }
