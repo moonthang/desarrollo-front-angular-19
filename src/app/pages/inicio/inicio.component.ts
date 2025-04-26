@@ -13,16 +13,19 @@ import { CommonModule } from '@angular/common';
 export class InicioComponent {
 
   empresas = [
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
-    { nombre: 'Prueba', logo: 'assets/img/logos/logo-coonadoc.png' },
+    { nombre: 'U La Gran Colombia', logo: 'assets/img/convenios/u_la_gran_colombia.png' },
+    { nombre: 'Expoturismo', logo: 'assets/img/convenios/expoturismo.jpg' },
+    { nombre: 'GES', logo: 'assets/img/convenios/GES.png' },
+    { nombre: 'Smart', logo: 'assets/img/convenios/logo-smart.png' },
+    { nombre: 'Panela Tours', logo: 'assets/img/convenios/panela-tours.jpg' },
+    { nombre: 'El Cielo', logo: 'assets/img/convenios/el-cielo.png' },
   ];
 
   get empresasPorGrupo() {
+    if (window.innerWidth <= 768) {
+      return [this.empresas];
+    }
+
     const grupos: any[][] = [];
     const size = 4;
     for (let i = 0; i < this.empresas.length; i += size) {

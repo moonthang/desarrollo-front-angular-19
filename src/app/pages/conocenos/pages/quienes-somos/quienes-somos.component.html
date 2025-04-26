@@ -40,6 +40,16 @@
     </div>
 </section>
 
+<!-- Banner con video -->
+<section class="video-banner-section py-5 my-5 bg-white">
+    <div class="video-container"
+        onclick="this.querySelector('video').paused ? this.querySelector('video').play() : this.querySelector('video').pause()">
+        <video muted loop playsinline onended="this.play()">
+            <source src="assets/videos/COONADOC.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
 <!-- Nuestros Valores -->
 <section class="our-values py-5">
     <div class="container">
