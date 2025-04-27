@@ -1,0 +1,10 @@
+<section class="login py-5">
+  <div class="container mt-5 shadow-lg">
+    <h2>Iniciar sesión</h2>
+    <form [formGroup]="form" (ngSubmit)="iniciarSesion()">
+      <input formControlName="username" class="form-control mb-2" placeholder="Usuario">
+      <input formControlName="password" type="password" class="form-control mb-3" placeholder="Contraseña">
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Entrar</button>
+    </form>
+  </div>
+</section>
