@@ -21,10 +21,6 @@ import { CreditosComponent } from './pages/servicios/pages/creditos/creditos.com
 import { EducacionComponent } from './pages/servicios/pages/educacion/educacion.component';
 import { SegurosComponent } from './pages/servicios/pages/seguros/seguros.component';
 import { LoginComponent } from './pages/login/login.component';
-import { DashAdminComponent } from './pages/dashboard/dash-admin/dash-admin.component';
-import { DashEditorComponent } from './pages/dashboard/dash-editor/dash-editor.component';
-import { DashUsuarioComponent } from './pages/dashboard/dash-usuario/dash-usuario.component';
-
 
 export const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
@@ -48,10 +44,6 @@ export const routes: Routes = [
   { path: 'servicios/seguros', component: SegurosComponent },
   { path: 'servicios/turismo', component: TurismoComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'admin', component: DashAdminComponent },
-  { path: 'editor', component: DashEditorComponent },
-  { path: 'usuario', component: DashUsuarioComponent },
-
   {
     path: 'dash-admin',
     loadComponent: () => import('./pages/dashboard/dash-admin/dash-admin.component').then(m => m.DashAdminComponent)
