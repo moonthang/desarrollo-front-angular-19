@@ -62,11 +62,25 @@
         </li>
         <li class="nav-list"><a routerLink="/pagos" routerLinkActive="active-link">Pagos</a></li>
         <li class="nav-list"><a routerLink="/contacto" routerLinkActive="active-link">Contáctanos</a></li>
-        <li class="nav-list mobile-login-item">
-          <a routerLink="/login" class="btn-login">
-            <i class="bi bi-person-circle"></i> Acceder
-          </a>
-        </li>
+        @if (!usuarioLogueado) {
+          <li class="nav-list mobile-login-item">
+            <a routerLink="/login" class="btn-login">
+              <i class="bi bi-person-circle"></i> Acceder
+            </a>
+          </li>
+        } @else {
+          <li class="nav-list dropdown">
+            <a href="#" class="btn-login">
+              <i class="bi bi-person-circle"></i> {{ usuarioLogueado.rol | titlecase }}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a [routerLink]="getDashboardRoute()">Dashboard</a></li>
+              <li><a routerLink="/publicar">Publicar Blog</a></li>
+              <li><a routerLink="/configuracion">Configuración</a></li>
+              <li><a href="#" (click)="logout()">Cerrar sesión</a></li>
+            </ul>
+          </li>
+        }
       </ul>
     </nav>
   </div>
@@ -102,11 +116,25 @@
       </li>
       <li class="nav-list"><a routerLink="/pagos" routerLinkActive="active-link">Pagos</a></li>
       <li class="nav-list"><a routerLink="/contacto" routerLinkActive="active-link">Contáctanos</a></li>
-      <li class="nav-list">
-        <a routerLink="/login" class="btn-login">
-          <i class="bi bi-person-circle"></i> Acceder
-        </a>
-      </li>
+      @if (!usuarioLogueado) {
+        <li class="nav-list">
+          <a routerLink="/login" class="btn-login">
+            <i class="bi bi-person-circle"></i> Acceder
+          </a>
+        </li>
+      } @else {
+        <li class="nav-list dropdown">
+          <a href="#" class="btn-login">
+            <i class="bi bi-person-circle"></i> {{ usuarioLogueado.rol | titlecase }}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="getDashboardRoute()">Dashboard</a></li>
+            <li><a routerLink="/publicar">Publicar Blog</a></li>
+            <li><a routerLink="/configuracion">Configuración</a></li>
+            <li><a href="#" (click)="logout()">Cerrar sesión</a></li>
+          </ul>
+        </li>
+      }
     </ul>
   </nav>
 </header>

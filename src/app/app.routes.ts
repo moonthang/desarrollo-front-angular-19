@@ -52,6 +52,20 @@ export const routes: Routes = [
   { path: 'editor', component: DashEditorComponent },
   { path: 'usuario', component: DashUsuarioComponent },
 
+  {
+    path: 'dash-admin',
+    loadComponent: () => import('./pages/dashboard/dash-admin/dash-admin.component').then(m => m.DashAdminComponent)
+  },
+  {
+    path: 'dash-editor',
+    loadComponent: () => import('./pages/dashboard/dash-editor/dash-editor.component').then(m => m.DashEditorComponent)
+  },
+  {
+    path: 'dash-usuario',
+    loadComponent: () => import('./pages/dashboard/dash-usuario/dash-usuario.component').then(m => m.DashUsuarioComponent)
+  },
+  
+
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', redirectTo: 'inicio' }
 ];

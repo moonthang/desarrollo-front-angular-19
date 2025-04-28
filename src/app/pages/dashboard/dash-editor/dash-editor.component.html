@@ -1,3 +1,17 @@
-<div class="container mt-5">
-  <h2>Bienvenido editor</h2>
+<div class="d-flex">
+  <div class="bg-light p-3" style="width: 200px; min-height: 100vh;">
+    <h5>Menú</h5>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a routerLink="/{{role}}/publicar" class="nav-link">Publicar blog</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/{{role}}/otra-opcion" class="nav-link">Otra opción</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="p-4 flex-grow-1">
+    <h2>Bienvenido {{role}}</h2>
+  </div>
 </div>
