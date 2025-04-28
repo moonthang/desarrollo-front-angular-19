@@ -1,0 +1,55 @@
+.title-container {
+    position: relative;
+}
+
+.title-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    z-index: -1;
+    margin: 0;
+}
+
+.section-title {
+    z-index: 1;
+}
+
+.title-content {
+    position: relative;
+    display: inline-block;
+}
+
+.image-hover-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.image-hover-container img {
+    width: 100%;
+    display: block;
+}
+
+.hover-options {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: bottom 0.3s ease;
+}
+
+.image-hover-container:hover .hover-options {
+    bottom: 0;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+}

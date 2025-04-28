@@ -1,0 +1,54 @@
+<!-- FAQ -->
+<div class="faq-container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="categories-container">
+                <h2 class="categories-title">Categorías</h2>
+                <ul class="nav flex-column categories-list">
+                    <li class="nav-item">
+                        <button class="nav-link" (click)="cambiarCategoria('creditos')"
+                            [class.active]="categoriaActual === 'creditos'">
+                            Créditos
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" (click)="cambiarCategoria('asociacion')"
+                            [class.active]="categoriaActual === 'asociacion'">
+                            Asociación
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" (click)="cambiarCategoria('retiro')"
+                            [class.active]="categoriaActual === 'retiro'">
+                            Retiro
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h1 class="faq-title">Preguntas Frecuentes</h1>
+            <div class="accordion" id="faqAccordion">
+                @for (pregunta of preguntasFrecuentesFiltradas; track $index) {
+                <div class="accordion-item border-0">
+                    <h2 class="accordion-header" [id]="'heading' + $index">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            [attr.data-bs-target]="'#collapse' + $index" aria-expanded="false"
+                            [attr.aria-controls]="'collapse' + $index">
+                            {{ pregunta.pregunta }}
+                            <i class="bi bi-caret-down-fill"></i>
+                        </button>
+                    </h2>
+                    <div [id]="'collapse' + $index" class="accordion-collapse collapse"
+                        [attr.aria-labelledby]="'heading' + $index" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            {{ pregunta.respuesta }}
+                        </div>
+                    </div>
+                    <div class="accordion-divider"></div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

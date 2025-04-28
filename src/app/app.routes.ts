@@ -6,6 +6,7 @@ import { PoliticasComponent } from './pages/conocenos/pages/politicas/politicas.
 import { PqrsdfComponent } from './pages/conocenos/pages/pqrsdf/pqrsdf.component';
 import { QuienesSomosComponent } from './pages/conocenos/pages/quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { FaqComponent } from './pages/faq/faq.component';
 import { HerramientasComponent } from './pages/herramientas/herramientas.component';
 import { AppComponent } from './pages/herramientas/pages/app/app.component';
 import { CampusComponent } from './pages/herramientas/pages/campus/campus.component';
@@ -30,11 +31,13 @@ export const routes: Routes = [
   { path: 'conocenos/pqrsdf', component: PqrsdfComponent },
   { path: 'conocenos/quienes-somos', component: QuienesSomosComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'faq', component: FaqComponent },
   { path: 'herramientas', component: HerramientasComponent },
   { path: 'herramientas/app', component: AppComponent},
   { path: 'herramientas/campus', component: CampusComponent},
   { path: 'herramientas/oficina', component: OficinaComponent},
   { path: 'pagos', component: PagosComponent },
+  { path: 'pqrsdf', component: PqrsdfComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'servicios/auxilios', component: AuxiliosComponent },
   { path: 'servicios/clasificados', component: ClasificadosComponent },
