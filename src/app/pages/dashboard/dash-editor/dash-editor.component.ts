@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-dash-editor',
@@ -8,5 +9,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './dash-editor.component.css'
 })
 export class DashEditorComponent {
-  role = localStorage.getItem('role');
+  role = 'dash-editor';
+
+  constructor(private authService: AuthService, private router: Router) {}
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/inicio']);
+  }
 }

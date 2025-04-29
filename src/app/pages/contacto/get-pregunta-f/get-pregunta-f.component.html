@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Mensajes Contacto</h2>
+    <table class="pqrsdf-table">
+        <thead>
+            <tr>
+                <th>Fecha Mensaje</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of preguntafList; track item.id) {
+            <tr>
+                <td>{{ item.fechaCreacion | date:'mediumDate' }}</td>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.correo }}</td>
+                <td>{{ item.descripcion }}</td>
+                <td>
+                    <div class="status-control">
+                        @if (loadingStates[item.id]) {
+                        <div class="spinner"></div>
+                        }
+                    </div>
+                </td>
+            </tr>
+            } @empty {
+            <tr>
+                <td colspan="5" class="no-data">No hay mensajes registrados</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

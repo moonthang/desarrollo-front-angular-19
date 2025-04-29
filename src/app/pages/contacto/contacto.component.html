@@ -38,19 +38,17 @@
         </div>
     </div>
 </div>
-
-<!-- Pregunta -->
-<div class="question-section my-5 py-5">
-    <div class="question">
+<div class="pregunta-section my-5 py-5">
+    <div class="pregunta">
         <div class="row justify-content-center ">
             <div class="col-xl-10">
                 <h2 class="mb-5 text-center">¿Preguntas? No dude en comunicarse por mensaje.</h2>
             </div>
             <div class="preguntaForm">
-                <form [formGroup]="preguntaForm" (ngSubmit)="enviarPregunta()" class="container">
+                <form [formGroup]="preguntaForm" (ngSubmit)="onSubmit()" class="container">
                     <div class="row justify-content-center">
                         <div class="mb-2">
-                            <label for="nombr" class="form-label">Nombre*</label>
+                            <label for="nombre" class="form-label">Nombre*</label>
                             <input type="text" id="nombre" formControlName="nombre" class="form-control" />
                         </div>
                         <div class="mb-2">
@@ -68,11 +66,29 @@
                                 style="height: 150px;"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg px-5"
-                                [disabled]="preguntaForm.invalid">Enviar</button>
+                            <button type="submit" class="btn btn-primary"
+                                [disabled]="preguntaForm.invalid || isSubmitting">
+                                @if (isSubmitting) {
+                                <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                                <span role="status">Enviando...</span>
+                                } @else {
+                                Enviar
+                                }
+                            </button>
                         </div>
                     </div>
                 </form>
+                @if (submitSuccess) {
+                <div class="alert alert-success mb-4">
+                    <strong>¡Éxito!</strong> Tu pregunta ha sido enviado correctamente. Nos pondremos en contacto
+                    contigo pronto.
+                </div>
+                }
+                @if (errorMessage) {
+                <div class="alert alert-danger mb-4">
+                    <strong>Error:</strong> {{ errorMessage }}
+                </div>
+                }
             </div>
         </div>
     </div>

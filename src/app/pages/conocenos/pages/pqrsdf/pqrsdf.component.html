@@ -54,9 +54,27 @@
       <textarea id="descripcion" formControlName="descripcion" class="form-control" rows="3"></textarea>
     </div>
     <div class="mb-3">
-      <label for="archivo" class="form-label">Adjuntar archivo</label>
+      <label for="archivo" class="form-label">Adjuntar archivo (opcional)</label>
       <input type="file" id="archivo" (change)="onFileSelected($event)" class="form-control" />
+      <small class="text-muted">Formatos aceptados: PDF, JPG, PNG (Máx. 5MB)</small>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="pqrsdfForm.invalid">Enviar</button>
+    <button type="submit" class="btn btn-primary" [disabled]="pqrsdfForm.invalid || isSubmitting">
+      @if (isSubmitting) {
+        <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+        <span role="status">Enviando...</span>
+      } @else {
+        Enviar
+      }
+    </button>
   </form>
+  @if (submitSuccess) {
+    <div class="alert alert-success mb-4">
+      <strong>¡Éxito!</strong> Tu PQRSDF ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.
+    </div>
+    }
+    @if (errorMessage) {
+  <div class="alert alert-danger mb-4">
+    <strong>Error:</strong> {{ errorMessage }}
+  </div>
+  }
 </div>

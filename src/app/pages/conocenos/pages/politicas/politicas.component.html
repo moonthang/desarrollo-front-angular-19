@@ -1,5 +1,6 @@
 <section class="politicas-section py-5 my-5">
     <div class="container">
+
         <div class="title-container mb-5">
             <h2 class="section-title text-center position-relative">
                 <span class="title-content bg-white px-3"> Solicitudes </span>
@@ -7,36 +8,49 @@
             <hr class="title-line">
         </div>
         <div class="row justify-content-center">
+            @for (doc of filtrarDocumentos('solicitudes'); track doc.nombreArchivo) {
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="image-hover-container shadow">
-                    <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
+                    <img [src]="doc.imagen" class="img-fluid" [alt]="doc.nombre">
+                    @if (doc.mostrarHover) {
                     <div class="hover-options">
-                        <a href="#" class="btn btn-secondary btn-sm">Ver online</a>
-                        <a href="#" class="btn btn-dark btn-sm">Descargar</a>
+                        <button (click)="verOnline(doc.nombreArchivo, doc.categoria)"
+                            class="btn btn-secondary btn-sm">Ver online</button>
+                        <button (click)="descargar(doc.nombreArchivo, doc.categoria)"
+                            class="btn btn-dark btn-sm">Descargar</button>
                     </div>
+                    }
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="image-hover-container shadow">
-                    <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
+                    <img [src]="doc.imagen" class="img-fluid" [alt]="doc.nombre">
+                    @if (doc.mostrarHover) {
                     <div class="hover-options">
-                        <a href="#" class="btn btn-secondary btn-sm">Ver online</a>
-                        <a href="#" class="btn btn-dark btn-sm">Descargar</a>
+                        <button (click)="verOnline(doc.nombreArchivo, doc.categoria)"
+                            class="btn btn-secondary btn-sm">Ver online</button>
+                        <button (click)="descargar(doc.nombreArchivo, doc.categoria)"
+                            class="btn btn-dark btn-sm">Descargar</button>
                     </div>
+                    }
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="image-hover-container shadow">
-                    <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
+                    <img [src]="doc.imagen" class="img-fluid" [alt]="doc.nombre">
+                    @if (doc.mostrarHover) {
                     <div class="hover-options">
-                        <a href="#" class="btn btn-secondary btn-sm">Ver online</a>
-                        <a href="#" class="btn btn-dark btn-sm">Descargar</a>
+                        <button (click)="verOnline(doc.nombreArchivo, doc.categoria)"
+                            class="btn btn-secondary btn-sm">Ver online</button>
+                        <button (click)="descargar(doc.nombreArchivo, doc.categoria)"
+                            class="btn btn-dark btn-sm">Descargar</button>
                     </div>
+                    }
                 </div>
             </div>
+            }
         </div>
+
         <div class="title-container mb-5 py-5">
             <h2 class="section-title text-center position-relative">
                 <span class="title-content bg-white px-3"> Aportes </span>
@@ -53,7 +67,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="image-hover-container shadow">
                     <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
@@ -63,7 +76,42 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="image-hover-container shadow">
+                    <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
+                    <div class="hover-options">
+                        <a href="#" class="btn btn-secondary btn-sm">Ver online</a>
+                        <a href="#" class="btn btn-dark btn-sm">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="title-container mb-5">
+            <h2 class="section-title text-center position-relative">
+                <span class="title-content bg-white px-3"> Politicas </span>
+            </h2>
+            <hr class="title-line">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="image-hover-container shadow">
+                    <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
+                    <div class="hover-options">
+                        <a href="#" class="btn btn-secondary btn-sm">Ver online</a>
+                        <a href="#" class="btn btn-dark btn-sm">Descargar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="image-hover-container shadow">
+                    <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">
+                    <div class="hover-options">
+                        <a href="#" class="btn btn-secondary btn-sm">Ver online</a>
+                        <a href="#" class="btn btn-dark btn-sm">Descargar</a>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="image-hover-container shadow">
                     <img src="assets/img/formatos/sol-asociacion.png" class="img-fluid">

@@ -80,7 +80,7 @@
 /* ========== */
 /* FORMULARIO */
 /* ========== */
-.question-section {
+.pregunta-section {
   background-color: #f1f1f1;
   padding: 4rem 1rem;
   display: flex;
@@ -89,7 +89,7 @@
   margin-bottom: 0 !important;
 }
 
-.question h2 {
+.pregunta h2 {
   align-items: center;
   margin-bottom: 2rem;
   font-weight: 600;
@@ -107,7 +107,7 @@
 .form-label {
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: #212529;
   display: block;
 }
 
@@ -155,7 +155,7 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-  .question {
+  .pregunta {
     padding: 1.5rem;
   }
 

@@ -49,11 +49,34 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
     path: 'dash-admin',
-    loadComponent: () => import('./pages/dashboard/dash-admin/dash-admin.component').then(m => m.DashAdminComponent)
+    loadComponent: () => import('./pages/dashboard/dash-admin/dash-admin.component').then(m => m.DashAdminComponent),
+    children: [
+      { 
+        path: 'get-pqrsdf', 
+        loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent) 
+      },
+      { 
+        path: 'get-pregunta-f',
+        loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent) 
+      },
+      { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
+    ]
   },
   {
     path: 'dash-editor',
-    loadComponent: () => import('./pages/dashboard/dash-editor/dash-editor.component').then(m => m.DashEditorComponent)
+    loadComponent: () => import('./pages/dashboard/dash-editor/dash-editor.component').then(m => m.DashEditorComponent),
+    children: [
+      { 
+        path: 'get-pqrsdf', 
+        loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent) 
+      },
+      { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' },
+      { 
+        path: 'get-pregunt-f', 
+        loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent) 
+      },
+      { path: '', redirectTo: 'get-pregunta-f', pathMatch: 'full' }
+    ]
   },
   {
     path: 'dash-usuario',

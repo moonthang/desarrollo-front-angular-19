@@ -8,5 +8,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './dash-usuario.component.css'
 })
 export class DashUsuarioComponent {
-  role = localStorage.getItem('role');
+  role = 'dash-usuario';
 }

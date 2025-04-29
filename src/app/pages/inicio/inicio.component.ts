@@ -21,6 +21,15 @@ export class InicioComponent {
     { nombre: 'El Cielo', logo: 'assets/img/convenios/el-cielo.png' },
   ];
 
+  imgActividades = [
+    { id: 1, src: 'assets/img/actividades/actividades1.jpg' },
+    { id: 2, src: 'https://source.unsplash.com/random/600x400?city' },
+    { id: 3, src: 'https://source.unsplash.com/random/600x400?people' },
+    { id: 4, src: 'https://source.unsplash.com/random/600x400?architecture' },
+    { id: 5, src: 'https://source.unsplash.com/random/600x400?technology' },
+    { id: 6, src: 'https://source.unsplash.com/random/600x400?art' }
+  ];
+
   get empresasPorGrupo() {
     if (window.innerWidth <= 768) {
       return [this.empresas];

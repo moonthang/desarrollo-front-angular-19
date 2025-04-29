@@ -1,0 +1,46 @@
+<div class="container">
+  <h2>Solicitudes PQRSDF</h2>
+  <table class="pqrsdf-table">
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Movil</th>
+        <th>Motivo</th>
+        <th>Descripción</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (item of pqrsdfList; track item.id) {
+        <tr>
+          <td>{{ item.fecha | date:'mediumDate' }}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.correo }}</td>
+          <td>{{ item.movil }}</td>
+          <td>{{ item.motivo }}</td>
+          <td>{{ item.descripcion }}</td>
+          <td>
+            <div class="status-control">
+              @if (loadingStates[item.id]) {
+                <div class="spinner"></div>
+              } @else {
+                <select [(ngModel)]="item.estado" (change)="onStatusChange(item)" 
+                        class="status-select" [class]="getStatusClass(item.estado)">
+                  <option value="pendiente">Pendiente</option>
+                  <option value="en_proceso">En proceso</option>
+                  <option value="resuelto">Resuelto</option>
+                </select>
+              }
+            </div>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5" class="no-data">No hay solicitudes PQRSDF registradas</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

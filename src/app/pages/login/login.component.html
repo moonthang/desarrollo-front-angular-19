@@ -1,23 +1,19 @@
-<section class="login py-5">
+<section class="login aling-items-center py-5">
   <div class="container mt-5 shadow-lg p-4">
     <h2>Iniciar sesión</h2>
-    
     <div *ngIf="errorMessage" class="alert alert-danger">
       {{ errorMessage }}
     </div>
-    
     <form [formGroup]="form" (ngSubmit)="iniciarSesion()">
       <input formControlName="username" class="form-control mb-2" placeholder="Correo electrónico">
       <div *ngIf="form.get('username')?.invalid && form.get('username')?.touched" class="text-danger mb-2">
         <small *ngIf="form.get('username')?.errors?.['required']">El correo es requerido</small>
         <small *ngIf="form.get('username')?.errors?.['email']">Ingresa un correo válido</small>
       </div>
-      
       <input formControlName="password" type="password" class="form-control mb-3" placeholder="Contraseña">
       <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched" class="text-danger mb-2">
         <small *ngIf="form.get('password')?.errors?.['required']">La contraseña es requerida</small>
       </div>
-      
       <button type="submit" class="btn btn-primary" [disabled]="form.invalid || loading">
         <span *ngIf="!loading">Entrar</span>
         <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

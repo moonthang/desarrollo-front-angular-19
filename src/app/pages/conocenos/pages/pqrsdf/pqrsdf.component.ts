@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject  } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Pqrsdf } from './pqrsdf.model';
+import { PqrsdfService } from './pqrsdf.service';
 
 @Component({
   selector: 'app-pqrsdf',
@@ -8,9 +10,16 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
   templateUrl: './pqrsdf.component.html',
   styleUrl: './pqrsdf.component.css'
 })
+ 
 export class PqrsdfComponent {
+  private fb = inject(FormBuilder);
+  private pqrsdfService = inject(PqrsdfService);
+
   pqrsdfForm: FormGroup;
   archivo: File | null = null;
+  isSubmitting = false;
+  submitSuccess = false;
+  errorMessage: string | null = null;
 
   dependencias = [
     'GERENCIA', 'COORDINACION', 'CREDITOS', 'CONTABILIDAD',
@@ -20,7 +29,7 @@ export class PqrsdfComponent {
 
   motivos = ['PETICION', 'QUEJA', 'RECLAMO', 'SOLICITUD', 'DENUNCIA', 'FELICITACION'];
 
-  constructor(private fb: FormBuilder) {
+  constructor() {
     this.pqrsdfForm = this.fb.group({
       fecha: ['', Validators.required],
       correo: ['', [Validators.required, Validators.email]],
@@ -46,18 +55,31 @@ export class PqrsdfComponent {
     }
   }
 
-  onSubmit() {
-    if (this.pqrsdfForm.valid) {
-      const formData = new FormData();
-      Object.entries(this.pqrsdfForm.value).forEach(([key, value]) => {
-        formData.append(key, value as string);
-      });
+  async onSubmit() {
+    if (this.pqrsdfForm.invalid || this.isSubmitting) return;
 
-      if (this.archivo) {
-        formData.append('archivo', this.archivo);
-      }
+    this.isSubmitting = true;
+    this.errorMessage = null;
+    this.submitSuccess = false;
 
-      console.log('Formulario enviado:', formData);
+    const { confirmarCorreo, ...formValues } = this.pqrsdfForm.value;
+
+    const pqrsdfData: Pqrsdf = {
+      ...formValues,
+      fechaCreacion: new Date().toISOString(),
+      estado: 'pendiente'
+    };
+
+    try {
+      await this.pqrsdfService.createPqrsdf(pqrsdfData, this.archivo ?? undefined);
+      this.submitSuccess = true;
+      this.pqrsdfForm.reset();
+      this.archivo = null;
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      this.errorMessage = 'Ocurrió un error al enviar el formulario. Por favor intenta nuevamente.';
+    } finally {
+      this.isSubmitting = false;
     }
   }
 }
