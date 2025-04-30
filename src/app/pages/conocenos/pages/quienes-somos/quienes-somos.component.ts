@@ -15,7 +15,7 @@ export class QuienesSomosComponent {
       button.style.display = 'none';
     } else {
       video.pause();
-      button.textContent = 'Pausa ⏸';
+      button.textContent = '⏸';
       button.style.display = 'flex';
     }
   }
@@ -26,7 +26,7 @@ export class QuienesSomosComponent {
       button.style.display = 'none';
     } else {
       video.pause();
-      button.textContent = 'Pausa ⏸';
+      button.textContent = '⏸';
       button.style.display = 'flex';
     }
   }

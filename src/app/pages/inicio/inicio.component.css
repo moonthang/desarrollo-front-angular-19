@@ -169,7 +169,7 @@
 }
 
 /* ========== */
-/*  ASOSIATE  */
+/*  AFILIATE  */
 /* ========== */
 .section-title-ass {
   font-size: 2.5rem;
@@ -200,7 +200,7 @@
   line-height: 1.6;
 }
 
-.associate-img,
+.afiliate-img,
 .benefits-img,
 .reasons-img {
   border-radius: 10px;
@@ -234,6 +234,10 @@
 .reasons-list {
   list-style-type: none;
   padding-left: 0;
+}
+
+.benefits-list ul{
+  list-style-type: none;
 }
 
 .benefits-list li,
@@ -309,7 +313,8 @@
   transition: transform 0.3s ease;
 }
 
-.incl-left:hover, .incl-right:hover {
+.incl-left:hover,
+.incl-right:hover {
   transform: rotate(0deg) scale(1.5);
   z-index: 2;
   position: relative;
@@ -330,12 +335,19 @@
     height: 150px;
   }
 
-  .incl-left, .incl-right {
-    transform: rotate(0deg);
+  .incl-left {
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
   }
 
-  .incl-left:hover, .incl-right:hover {
-    transform: scale(1.05);
+  .incl-right {
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-left:hover,
+  .incl-right:hover {
+    transform: scale(1.5);
   }
 }
 
@@ -343,6 +355,21 @@
   .collage-img {
     flex: 0 0 calc(33.333% - 10px);
     height: 130px;
+  }
+
+  .incl-left {
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-right {
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-left:hover,
+  .incl-right:hover {
+    transform: scale(1.5);
   }
 }
 
@@ -436,7 +463,7 @@
 .service-card p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1.3rem;
-  }
+}
 
 .btn-more {
   background-color: var(--color-principal);

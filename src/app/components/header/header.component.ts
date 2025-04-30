@@ -1,4 +1,4 @@
-import { Component, HostListener, OnDestroy } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule, Router } from '@angular/router';
 import { TitleCasePipe } from '@angular/common';
 import { AuthService } from '../../services/auth.service';

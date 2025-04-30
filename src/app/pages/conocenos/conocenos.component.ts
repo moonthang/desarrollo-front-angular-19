@@ -16,7 +16,7 @@ export class ConocenosComponent {
       button.style.display = 'none';
     } else {
       video.pause();
-      button.textContent = 'Pausa ⏸';
+      button.textContent = '⏸';
       button.style.display = 'flex';
     }
   }
@@ -27,7 +27,7 @@ export class ConocenosComponent {
       button.style.display = 'none';
     } else {
       video.pause();
-      button.textContent = 'Pausa ⏸';
+      button.textContent = '⏸';
       button.style.display = 'flex';
     }
   }

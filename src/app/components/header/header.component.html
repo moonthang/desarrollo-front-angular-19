@@ -70,12 +70,15 @@
           </li>
         } @else {
           <li class="nav-list dropdown">
-            <a href="#" class="btn-login">
-              <i class="bi bi-person-circle"></i> {{ usuarioLogueado.rol | titlecase }}
-            </a>
-            <ul class="dropdown-menu">
+            <div class="dropdown-content-wrapper">
+              <a class="btn-login">
+                <i class="bi bi-person-circle"></i> {{ usuarioLogueado.rol | titlecase }}
+              </a>
+              <button class="toggle-submenu bi bi-caret-down-fill" [class.rotated]="submenusVisible['/user']"
+                (click)="toggleSubmenu('/user'); $event.stopPropagation()"></button>
+            </div>
+            <ul class="dropdown-menu" [class.visible]="submenusVisible['/user']">
               <li><a [routerLink]="getDashboardRoute()">Dashboard</a></li>
-              <li><a routerLink="/publicar">Publicar Blog</a></li>
               <li><a routerLink="/configuracion">Configuración</a></li>
               <li><a href="#" (click)="logout()">Cerrar sesión</a></li>
             </ul>
