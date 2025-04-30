@@ -12,16 +12,16 @@
                 <small class="section-subtitle text-muted">¿QUIÉNES SOMOS?</small>
             </div>
             <div class="col-md-6 d-flex justify-content-around text-center mt-4 mt-md-0">
-                <div class="about-us"> 
+                <div class="about-us">
                     <h2 class="section-title mt-2">
                         Desde 1988, mejorarando la
                         calidad de vida de nuestros asociados y
                         sus familias.
                     </h2>
                     <p class="section-description mt-3 text-secondary">
-                        Somos una cooperativa fundada por docentes con un modelo solidario orientado a servicios 
-                        integrales de aporte y crédito de manera socialmente responsable, sostenible que genera 
-                        una rentabilidad superior para fortalecer patrimonio y brindar bienestar a través de 
+                        Somos una cooperativa fundada por docentes con un modelo solidario orientado a servicios
+                        integrales de aporte y crédito de manera socialmente responsable, sostenible que genera
+                        una rentabilidad superior para fortalecer patrimonio y brindar bienestar a través de
                         excedentes cooperativos que beneficien a todos sus asociados.
                     </p>
                     <div class="about-stat">
@@ -42,11 +42,13 @@
 
 <!-- Banner con video -->
 <section class="video-banner-section py-5 my-5 bg-white">
-    <div class="video-container"
-        onclick="this.querySelector('video').paused ? this.querySelector('video').play() : this.querySelector('video').pause()">
-        <video muted loop playsinline onended="this.play()">
+    <div class="video-container">
+        <video #videoEl muted loop playsinline (ended)="videoEl.play()" (click)="onVideoClick(videoEl, playBtn)">
             <source src="assets/videos/COONADOC.mp4" type="video/mp4">
         </video>
+        <button class="play-btn" #playBtn (click)="toggleVideo(videoEl, playBtn, $event)">
+            Play ▶
+        </button>
     </div>
 </section>
 

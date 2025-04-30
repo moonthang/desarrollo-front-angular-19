@@ -36,7 +36,7 @@ export class InicioComponent {
     }
 
     const grupos: any[][] = [];
-    const size = 4;
+    const size = 3;
     for (let i = 0; i < this.empresas.length; i += size) {
       grupos.push(this.empresas.slice(i, i + size));
     }
@@ -64,14 +64,14 @@ export class InicioComponent {
 
   scrollLeft() {
     this.ServiciosWrapper.nativeElement.scrollBy({
-      left: -300,
+      left: -250,
       behavior: 'smooth'
     });
   }
 
   scrollRight() {
     this.ServiciosWrapper.nativeElement.scrollBy({
-      left: 300,
+      left: 250,
       behavior: 'smooth'
     });
   }

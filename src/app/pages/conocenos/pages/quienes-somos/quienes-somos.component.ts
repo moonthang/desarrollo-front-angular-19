@@ -7,5 +7,27 @@ import { Component } from '@angular/core';
   styleUrl: './quienes-somos.component.css'
 })
 export class QuienesSomosComponent {
+  toggleVideo(video: HTMLVideoElement, button: HTMLButtonElement, event: MouseEvent): void {
+    event.stopPropagation();
 
+    if (video.paused) {
+      video.play();
+      button.style.display = 'none';
+    } else {
+      video.pause();
+      button.textContent = 'Pausa ⏸';
+      button.style.display = 'flex';
+    }
+  }
+
+  onVideoClick(video: HTMLVideoElement, button: HTMLButtonElement): void {
+    if (video.paused) {
+      video.play();
+      button.style.display = 'none';
+    } else {
+      video.pause();
+      button.textContent = 'Pausa ⏸';
+      button.style.display = 'flex';
+    }
+  }
 }

@@ -1,0 +1,99 @@
+.btn-more {
+    color: var(--color-principal);
+    border: 0.125rem solid var(--color-principal);
+    padding: 0.62rem 1.2rem;
+    border-radius: 3rem;
+    transition: all 0.3s ease;
+  }
+
+  .btn-more i {
+    font-size: 1.7rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-more:hover i {
+    transform: scale(1.9);
+  }
+  
+  .btn-more:hover {
+    background-color: var(--color-principal);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.video-banner-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .video-container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    width: 80%;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  
+  .video-container::before {
+    content: '';
+    position: absolute;
+    inset: -0.625rem;
+    border-radius: 0.75rem;
+    z-index: -1;
+    background: linear-gradient(to bottom, #228B22 0%, #22CC23 30%, #FF5400 70%, #FFA420 100%);
+    animation: movingShadow 8s infinite ease-in-out;
+    opacity: 0.7;
+    filter: blur(20px);
+  }
+  
+  @media (max-width: 768px) {
+    .video-container {
+      width: 100%;
+    }
+  
+    .video-banner-section {
+      padding: 20px 0;
+    }
+
+    .col-md-6.order-md-1 {
+        margin-bottom: 20px;
+      }
+  }
+
+  @media (max-width: 576px) {
+      .video-banner {
+        padding-top: 4rem;
+      }
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-principal-claro);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s;
+    z-index: 3;
+  }

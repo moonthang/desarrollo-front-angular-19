@@ -22,11 +22,11 @@
 <!-- Beneficios -->
 <section class="container position-relative  benefits-section">
     <div class="benefits-card-container mx-auto">
-        <div class="card benefits-card">
+        <div class="card benefits-card shadow">
             <div class="benefits-shape">
                 <img src="assets/img/shapes/shape-8.png" alt="Decoración" class="img-fluid">
             </div>
-            <div class="card-body p-4">
+            <div class="card-body p-4 shadow-lg">
                 <div class="d-flex flex-wrap justify-content-center text-center gap-4">
                     <div class="benefits-item">
                         <div class="benefits-icon mb-2">
@@ -74,9 +74,9 @@
             <div class="col-md-6">
                 <h3 class="section-subtitle-ass">¿Quiénes pueden asociarse?</h3>
                 <ul class="benefits-list mt-3">
-                    <li>Elemento 1</li>
-                    <li>Elemento 2</li>
-                    <li>Elemento 3</li>
+                    <li>Docentes</li>
+                    <li>Familiares</li>
+                    <li>Otros</li>
                 </ul>
             </div>
         </div>
@@ -126,7 +126,7 @@
 </section>
 
 <!-- Servicios -->
-<section class="services-section py-5 my-5">
+<section class="services-section position-relative py-5 my-5">
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
@@ -135,10 +135,10 @@
                     sollicitudin quam nec porta sollicitudin. Nam vitae odio a ante sollicitudin tincidunt.</p>
             </div>
             <div class="col-md-6 text-end">
-                <button class="btn btn-slider me-2" (click)="scrollLeft()">
+                <button class="btn btn-slider justify-content-center align-items-center me-2" (click)="scrollLeft()">
                     <i class="bi bi-chevron-left"></i>
                 </button>
-                <button class="btn btn-slider" (click)="scrollRight()">
+                <button class="btn btn-slider justify-content-center align-items-center me-2" (click)="scrollRight()">
                     <i class="bi bi-chevron-right"></i>
                 </button>
             </div>
@@ -146,16 +146,16 @@
         <div class="row">
             <div class="col-12">
                 <div class="services-wrapper" #ServiciosWrapper>
-                    <div class="services-track" #ServiciosTrack>
+                    <div class="services-track d-flex gap-3 py-3" #ServiciosTrack>
                         <div class="service-card"
                             style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
                             <div class="card-overlay"></div>
                             <div class="card-content">
-                                <h3 [routerLink]="['/servicios/creditos']">Créditos</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
+                                <h3 class="text-white position-relative mb-2">Créditos</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
                                     nec
                                     porta sollicitudin.</p>
-                                <button class="btn btn-more">Más información</button>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/creditos'">Más información</button>
                             </div>
                         </div>
 
@@ -163,11 +163,11 @@
                             style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
                             <div class="card-overlay"></div>
                             <div class="card-content">
-                                <h3 [routerLink]="['/servicios/educacion']">Educación</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
+                                <h3 class="text-white position-relative mb-2">Educación</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
                                     nec
                                     porta sollicitudin.</p>
-                                <button class="btn btn-more">Más información</button>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/educacion'">Más información</button>
                             </div>
                         </div>
 
@@ -175,11 +175,11 @@
                             style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
                             <div class="card-overlay"></div>
                             <div class="card-content">
-                                <h3 [routerLink]="['/servicios/turismo']">Turismo</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
+                                <h3 class="text-white position-relative mb-2">Turismo</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
                                     nec
                                     porta sollicitudin.</p>
-                                <button class="btn btn-more">Más información</button>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/turismo'">Más información</button>
                             </div>
                         </div>
 
@@ -187,11 +187,11 @@
                             style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
                             <div class="card-overlay"></div>
                             <div class="card-content">
-                                <h3 [routerLink]="['/servicios/auxilios']">Auxilios</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
+                                <h3 class="text-white position-relative mb-2">Auxilios</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
                                     nec
                                     porta sollicitudin.</p>
-                                <button class="btn btn-more">Más información</button>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/auxilios'">Más información</button>
                             </div>
                         </div>
 
@@ -199,11 +199,11 @@
                             style="background-image: url('https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
                             <div class="card-overlay"></div>
                             <div class="card-content">
-                                <h3 [routerLink]="['/servicios/seguros']">Seguros</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
+                                <h3 class="text-white position-relative mb-2">Seguros</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
                                     nec
                                     porta sollicitudin.</p>
-                                <button class="btn btn-more">Más información</button>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/seguros'">Más información</button>"
                             </div>
                         </div>
                     </div>
@@ -219,13 +219,13 @@
         <div class="text-center mb-4">
             <h2>
                 <span class="empresas-text">Empresas</span>
-                <span class="aliadas-badge">Aliadas</span>
+                <span class="aliadas-badge text-white">Aliadas</span>
             </h2>
         </div>
         <div id="carouselEmpresas" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner carousel-inner-emp text-center">
+            <div class="carousel-inner carousel-inner-emp d-flex overflow-auto py-3">
                 @for (grupo of empresasPorGrupo; track $index; let i = $index) {
-                <div class="carousel-item carousel-item-emp" [class.active]="i === 0">
+                <div class="carousel-item carousel-item-emp py-3" [class.active]="i === 0">
                     <div class="d-flex justify-content-center gap-5 align-items-center flex-wrap">
 
                         @for (empresa of grupo; track empresa.nombre) {
@@ -247,16 +247,16 @@
 </section>
 
 <!-- FAQ -->
-<div class="faq-container mb-5 py-5 my-5">
+<div class="faq-container py-5 my-5 mx-auto px-3">
     <div class="row">
         <div class="col-md-4">
             <h1 class="faq-title mb-4">Preguntas Frecuentes</h1>
             <div class="contact-prompt">
                 <p class="mb-3">¿No encuentra la respuesta? Le ayudamos</p>
-                <button class="btn btn-contact" [routerLink]="'/contacto'">Contáctenos</button>
+                <button class="btn btn-contact text-white" [routerLink]="'/contacto'">Contáctenos</button>
             </div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
             <div class="accordion" id="faqAccordion">
                 @for (pregunta of preguntasFrecuentes; track $index) {
                 <div class="accordion-item border-0">
