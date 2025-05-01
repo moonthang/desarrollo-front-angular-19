@@ -1,126 +1,182 @@
 .container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: var(--color-oscuro);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.desktop-view {
+  display: block;
+}
+
+.pqrsdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.pqrsdf-table thead {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+.pqrsdf-table th {
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.pqrsdf-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.pqrsdf-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.pqrsdf-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.pqrsdf-table td {
+  padding: 0.8rem;
+  color: #333;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.pqrsdf-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-row {
+  display: flex;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.card-label {
+  font-weight: 600;
+  color: var(--color-principal);
+  min-width: 100px;
+  margin-right: 0.5rem;
+}
+
+.card-value {
+  flex: 1;
+  word-break: break-word;
+}
+
+.status-row {
+  align-items: center;
+}
+
+.no-data {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.status-control {
+  display: flex;
+  align-items: center;
+}
+
+.status-select {
+  padding: 0.35rem 0.65rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align: center;
+  min-width: 100px;
+  color: white;
+}
+
+.status-select.pendiente {
+  background-color: var(--color-secundario);
+}
+
+.status-select.en_proceso {
+  background-color: var(--color-secundario-claro);
+}
+
+.status-select.resuelto {
+  background-color: var(--color-principal-claro);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--color-principal);
+  border-radius: 50%;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
   }
   
   h2 {
-    color: var(--color-oscuro);
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
   }
   
-  .pqrsdf-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .pqrsdf-table thead {
-    background-color: var(--color-principal);
-    color: white;
-  }
-  
-  .pqrsdf-table th {
-    padding: 1rem;
-    text-align: left;
-    font-weight: 600;
-  }
-  
-  .pqrsdf-table tbody tr {
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.2s;
-  }
-  
-  .pqrsdf-table tbody tr:hover {
-    background-color: #f5f5f5;
-  }
-  
-  .pqrsdf-table tbody tr:last-child {
-    border-bottom: none;
-  }
-  
+  .pqrsdf-table th,
   .pqrsdf-table td {
-    padding: 1rem;
-    color: #333;
+    padding: 0.6rem;
+    font-size: 0.8rem;
   }
-   
-  .no-data {
-    text-align: center;
-    padding: 2rem;
-    color: #7f8c8d;
-    font-style: italic;
-  }
-  
-  .status-badge {
-    display: inline-block;
-    padding: 0.35rem 0.65rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: capitalize;
-  }
-  
-  .status-badge.pendiente {
-    background-color: var(--color-secundario);
-    color: white;
-  }
-  
-  .status-badge.en_proceso {
-    background-color: var(--color-principal);
-    color: white;
-  }
-  
-  .status-badge.resuelto {
-    background-color: var(--color-principal-claro);
-    color: white;
-  }
+}
 
-  .status-control {
-    display: flex;
-    align-items: center;
+@media (max-width: 576px) {
+  .desktop-view {
+    display: none;
   }
   
-  .status-select {
-    padding: 0.35rem 0.65rem;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    text-align: center;
-    min-width: 100px;
-    color: white;
+  .mobile-view {
+    display: block;
   }
   
-  .status-select.pendiente {
-    background-color: var(--color-secundario);
+  .pqrsdf-card {
+    padding: 0.8rem;
   }
   
-  .status-select.en_proceso {
-    background-color: var(--color-secundario-claro);
+  .card-label {
+    min-width: 80px;
+    font-size: 0.85rem;
   }
   
-  .status-select.resuelto {
-    background-color: var(--color-principal-claro);
+  .card-value {
+    font-size: 0.85rem;
   }
-  
-  .spinner {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    animation: spin 1s ease-in-out infinite;
-  }
-  
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
+}

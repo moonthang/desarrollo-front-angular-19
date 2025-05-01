@@ -1,19 +1,21 @@
 <div class="container">
   <h2>Solicitudes PQRSDF</h2>
-  <table class="pqrsdf-table">
-    <thead>
-      <tr>
-        <th>Fecha</th>
-        <th>Nombre</th>
-        <th>Correo</th>
-        <th>Movil</th>
-        <th>Motivo</th>
-        <th>Descripción</th>
-        <th>Estado</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (item of pqrsdfList; track item.id) {
+
+  <div class="desktop-view">
+    <table class="pqrsdf-table">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Movil</th>
+          <th>Motivo</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of pqrsdfList; track item.id) {
         <tr>
           <td>{{ item.fecha | date:'mediumDate' }}</td>
           <td>{{ item.nombre }}</td>
@@ -24,23 +26,72 @@
           <td>
             <div class="status-control">
               @if (loadingStates[item.id]) {
-                <div class="spinner"></div>
+              <div class="spinner"></div>
               } @else {
-                <select [(ngModel)]="item.estado" (change)="onStatusChange(item)" 
-                        class="status-select" [class]="getStatusClass(item.estado)">
-                  <option value="pendiente">Pendiente</option>
-                  <option value="en_proceso">En proceso</option>
-                  <option value="resuelto">Resuelto</option>
-                </select>
+              <select [(ngModel)]="item.estado" (change)="onStatusChange(item)" class="status-select"
+                [class]="getStatusClass(item.estado)">
+                <option value="pendiente">Pendiente</option>
+                <option value="en_proceso">En proceso</option>
+                <option value="resuelto">Resuelto</option>
+              </select>
               }
             </div>
           </td>
         </tr>
-      } @empty {
+        } @empty {
         <tr>
-          <td colspan="5" class="no-data">No hay solicitudes PQRSDF registradas</td>
+          <td colspan="7" class="no-data">No hay solicitudes PQRSDF registradas</td>
         </tr>
-      }
-    </tbody>
-  </table>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mobile-view">
+    @for (item of pqrsdfList; track item.id) {
+    <div class="pqrsdf-card">
+      <div class="card-row">
+        <span class="card-label">Fecha:</span>
+        <span class="card-value">{{ item.fecha | date:'mediumDate' }}</span>
+      </div>
+      <div class="card-row">
+        <span class="card-label">Nombre:</span>
+        <span class="card-value">{{ item.nombre }}</span>
+      </div>
+      <div class="card-row">
+        <span class="card-label">Correo:</span>
+        <span class="card-value">{{ item.correo }}</span>
+      </div>
+      <div class="card-row">
+        <span class="card-label">Móvil:</span>
+        <span class="card-value">{{ item.movil }}</span>
+      </div>
+      <div class="card-row">
+        <span class="card-label">Motivo:</span>
+        <span class="card-value">{{ item.motivo }}</span>
+      </div>
+      <div class="card-row">
+        <span class="card-label">Descripción:</span>
+        <span class="card-value">{{ item.descripcion }}</span>
+      </div>
+      <div class="card-row status-row">
+        <span class="card-label">Estado:</span>
+        <div class="status-control">
+          @if (loadingStates[item.id]) {
+          <div class="spinner"></div>
+          } @else {
+          <select [(ngModel)]="item.estado" (change)="onStatusChange(item)" class="status-select"
+            [class]="getStatusClass(item.estado)">
+            <option value="pendiente">Pendiente</option>
+            <option value="en_proceso">En proceso</option>
+            <option value="resuelto">Resuelto</option>
+          </select>
+          }
+        </div>
+      </div>
+    </div>
+    } @empty {
+    <div class="no-data">No hay solicitudes PQRSDF registradas</div>
+    }
+  </div>
 </div>

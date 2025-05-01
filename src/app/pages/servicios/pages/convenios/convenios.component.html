@@ -1,1 +1,41 @@
-<p>convenios works!</p>
+<section class="convenios-section position-relative text-white mb-5">
+    <img src="assets/img/backgrounds/bg_10.png" class="convenios-img w-100" alt="Equipo COONADOC">
+    <h1 class="convenios-title position-absolute top-50 start-50 translate-middle display-3 fw-bold">Convenios</h1>
+</section>
+
+<section class="convenios-content">
+    <div class="container py-4">
+        <p>Accede a beneficios especiales y descuentos por ser asociado de COONADOC.</p>
+        <div class="d-flex flex-wrap gap-3 my-4">
+            @for (cat of categorias; track cat.nombre) {
+            <button (click)="seleccionarCategoria(cat.nombre)" [class.active-btn]="categoriaSeleccionada === cat.nombre"
+                class="btn btn-light border d-flex align-items-center gap-2">
+                <i [class]="'bi ' + cat.icono"></i> {{cat.nombre}}
+            </button>
+            }
+        </div>
+        <div class="row g-4">
+            @for (card of filtrarCards(); track card.nombre) {
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm position-relative overflow-hidden">
+                    <div class="position-relative">
+                        <img [src]="card.imagen" class="card-img-top" alt="{{card.nombre}}" />
+                        <div
+                            class="card-overlay position-absolute top-0 start-0 w-100 p-2 d-flex justify-content-between align-items-start">
+                            <img [src]="card.logo" alt="logo {{card.nombre}}" class="card-logo">
+                            @if (card.destacado) {
+                            <div class="destacado-badge">Destacado</div>
+                            }
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <small class="text-muted d-block mb-2">{{card.categoria}}</small>
+                        <h5 class="card-title">{{card.nombre}}</h5>
+                        <p class="card-text">{{card.descripcion}}</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

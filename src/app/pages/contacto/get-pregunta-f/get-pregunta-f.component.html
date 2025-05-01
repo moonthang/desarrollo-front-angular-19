@@ -1,34 +1,69 @@
 <div class="container">
     <h2>Mensajes Contacto</h2>
-    <table class="pqrsdf-table">
-        <thead>
-            <tr>
-                <th>Fecha Mensaje</th>
-                <th>Nombre</th>
-                <th>Correo</th>
-                <th>Descripción</th>
-            </tr>
-        </thead>
-        <tbody>
-            @for (item of preguntafList; track item.id) {
-            <tr>
-                <td>{{ item.fechaCreacion | date:'mediumDate' }}</td>
-                <td>{{ item.nombre }}</td>
-                <td>{{ item.correo }}</td>
-                <td>{{ item.descripcion }}</td>
-                <td>
-                    <div class="status-control">
-                        @if (loadingStates[item.id]) {
-                        <div class="spinner"></div>
-                        }
-                    </div>
-                </td>
-            </tr>
-            } @empty {
-            <tr>
-                <td colspan="5" class="no-data">No hay mensajes registrados</td>
-            </tr>
-            }
-        </tbody>
-    </table>
+    <div class="desktop-view">
+        <table class="pqrsdf-table">
+            <thead>
+                <tr>
+                    <th>Fecha Mensaje</th>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Descripción</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of preguntafList; track item.id) {
+                <tr>
+                    <td>{{ item.fechaCreacion | date:'mediumDate' }}</td>
+                    <td>{{ item.nombre }}</td>
+                    <td>{{ item.correo }}</td>
+                    <td>{{ item.descripcion }}</td>
+                    <td>
+                        <div class="status-control">
+                            @if (loadingStates[item.id]) {
+                            <div class="spinner"></div>
+                            }
+                        </div>
+                    </td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="5" class="no-data">No hay mensajes registrados</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mobile-view">
+        @for (item of preguntafList; track item.id) {
+        <div class="message-card">
+            <div class="card-row">
+                <span class="card-label">Fecha:</span>
+                <span class="card-value">{{ item.fechaCreacion | date:'mediumDate' }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Nombre:</span>
+                <span class="card-value">{{ item.nombre }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Correo:</span>
+                <span class="card-value">{{ item.correo }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Descripción:</span>
+                <span class="card-value">{{ item.descripcion }}</span>
+            </div>
+            <div class="card-row status-row">
+                <div class="status-control">
+                    @if (loadingStates[item.id]) {
+                    <div class="spinner"></div>
+                    }
+                </div>
+            </div>
+        </div>
+        } @empty {
+        <div class="no-data">No hay mensajes registrados</div>
+        }
+    </div>
 </div>
