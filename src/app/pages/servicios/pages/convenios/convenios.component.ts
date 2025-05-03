@@ -23,14 +23,15 @@ export class ConveniosComponent {
       descripcion: 'Glamping.', 
       logo: 'assets/img/convenios/el-cielo.png', 
       imagen: 'https://el-cielo-glamping-251827.todos-los-hoteles-cundinamarca.com/data/Images/OriginalPhoto/11758/1175841/1175841748/image-caqueza-el-cielo-glamping-251827-1.JPEG', 
-      destacado: false },
-
+      destacado: false
+    },
     { categoria: 'Turismo',
       nombre: 'Expoturismo', 
       descripcion: 'Viajes de integración, individuales y grupales.',
       logo: 'assets/img/convenios/expoturismo.jpg', 
       imagen: 'https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',  
-      destacado: true },
+      destacado: true
+    },
   ];
 
   categoriaSeleccionada = this.categorias[0].nombre;

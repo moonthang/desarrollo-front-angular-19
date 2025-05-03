@@ -59,6 +59,10 @@ export const routes: Routes = [
         path: 'get-pregunta-f',
         loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent) 
       },
+      { 
+        path: 'get-credito-f',
+        loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
+      },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]
   },
@@ -70,12 +74,15 @@ export const routes: Routes = [
         path: 'get-pqrsdf', 
         loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent) 
       },
-      { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' },
       { 
-        path: 'get-pregunt-f', 
+        path: 'get-pregunta-f',
         loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent) 
       },
-      { path: '', redirectTo: 'get-pregunta-f', pathMatch: 'full' }
+      { 
+        path: 'get-credito-f',
+        loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
+      },
+      { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]
   },
   {

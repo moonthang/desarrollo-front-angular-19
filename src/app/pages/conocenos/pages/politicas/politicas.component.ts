@@ -34,6 +34,7 @@ export class PoliticasComponent {
     link.download = nombreArchivo;
     link.click();
   }
+  
   filtrarDocumentos(categoria: string): Documento[] {
     return this.documentos.filter(doc => doc.categoria === categoria);
   }

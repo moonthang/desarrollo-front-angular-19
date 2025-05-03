@@ -1,0 +1,95 @@
+<div class="container">
+    <h2>Solicitudes créditos del formulario</h2>
+
+    <div class="desktop-view">
+        <table class="creditoF-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nombre</th>
+                    <th>Movil</th> 
+                    <th>Correo</th>
+                    <th>Tipo de credito</th>
+                    <th>Profesión</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of creditofList; track item.id) {
+                <tr>
+                    <td>{{ item.fechaCreacion | date:'mediumDate' }}</td>
+                    <td>{{ item.nombreCompleto }}</td>
+                    <td>{{ item.telefono }}</td>
+                    <td>{{ item.correo }}</td>
+                    <td>{{ item.tipoCredito }}</td>
+                    <td>{{ item.profesion }}</td>
+                    <td>
+                        <div class="status-control">
+                            @if (loadingStates[item.id]) {
+                            <div class="spinner"></div>
+                            } @else {
+                            <select [(ngModel)]="item.estado" (change)="onStatusChange(item)" class="status-select"
+                                [class]="getStatusClass(item.estado)">
+                                <option value="sin_contacto">Pendiente</option>
+                                <option value="contactado">Contactado</option>
+                            </select>
+                            }
+                        </div>
+                    </td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="7" class="no-data">No hay solicitudes PQRSDF registradas</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mobile-view">
+        @for (item of creditofList; track item.id) {
+        <div class="creditoF-card">
+            <div class="card-row">
+                <span class="card-label">Fecha:</span>
+                <span class="card-value">{{ item.fechaCreacion | date:'mediumDate' }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Nombre:</span>
+                <span class="card-value">{{ item.nombreCompleto }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Móvil:</span>
+                <span class="card-value">{{ item.telefono }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Correo:</span>
+                <span class="card-value">{{ item.correo }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Tipo de crédito:</span>
+                <span class="card-value">{{ item.tipoCredito }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Profesión:</span>
+                <span class="card-value">{{ item.profesion }}</span>
+            </div>
+            <div class="card-row status-row">
+                <span class="card-label">Estado:</span>
+                <div class="status-control">
+                    @if (loadingStates[item.id]) {
+                    <div class="spinner"></div>
+                    } @else {
+                    <select [(ngModel)]="item.estado" (change)="onStatusChange(item)" class="status-select"
+                        [class]="getStatusClass(item.estado)">
+                        <option value="sin_contacto">Pendiente</option>
+                        <option value="contactado">Contactado</option>
+                    </select>
+                    }
+                </div>
+            </div>
+        </div>
+        } @empty {
+        <div class="no-data">No hay solicitudes de créditos registrados</div>
+        }
+    </div>
+</div>
