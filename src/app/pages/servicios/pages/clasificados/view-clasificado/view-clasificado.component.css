@@ -57,7 +57,7 @@
 .btn-contact:hover {
     background: var(--color-principal-claro);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .full-img {
@@ -89,4 +89,29 @@
     border-radius: 4px;
     margin: 0 0.3rem 0.3rem 0;
     display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .main-content {
+        flex: 1;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 3;
+        margin-top: 2rem;
+    }
+
+    .full-img {
+        height: auto;
+    }
+
+    .tags {
+        justify-content: flex-start;
+    }
 }
