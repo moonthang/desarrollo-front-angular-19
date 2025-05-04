@@ -36,16 +36,16 @@ export class InicioComponent {
 
   preguntasFrecuentes = [
     {
-      pregunta: '¿Pregunta 1?',
-      respuesta: 'Respuesta 1.'
+      pregunta: '¿Pruedo ser asociado si no soy docente?',
+      respuesta: 'Si es personal administrativo activo en el sector educativo oficial o familiar de primer grado de un asociado.'
     },
     {
-      pregunta: '¿Pregunta 2?',
-      respuesta: 'Respuesta 2.'
+      pregunta: '¿Como asociado puedo participar en excedentes?',
+      respuesta: 'Sí, al ser asociado puede participar en excedentes y beneficios sociales.'
     },
     {
-      pregunta: '¿Pregunta 3?',
-      respuesta: 'Respuesta 3.'
+      pregunta: '¿Cómo me puedo afiliar?',
+      respuesta: 'Solicita y diligencia el formulario de afiliación.'
     }
   ];
 

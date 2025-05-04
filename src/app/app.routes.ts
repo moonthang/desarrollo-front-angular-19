@@ -63,6 +63,14 @@ export const routes: Routes = [
         path: 'get-credito-f',
         loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
       },
+      { 
+        path: 'publish-clasificado',
+        loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent) 
+      },
+      { 
+        path: 'manage-clasificado',
+        loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent) 
+      },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]
   },
@@ -81,6 +89,14 @@ export const routes: Routes = [
       { 
         path: 'get-credito-f',
         loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
+      },
+      { 
+        path: 'publish-clasificado',
+        loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent) 
+      },
+      { 
+        path: 'manage-clasificado',
+        loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent) 
       },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]

@@ -26,14 +26,6 @@
   }
 }
 
-.container {
-  background-color: #ffffff;
-  background-image:
-    radial-gradient(550px 550px at 50% 30%, hsl(120.35, 71%, 47%) 0, transparent 70%),
-    radial-gradient(520px 520px at 70% 50%, hsl(35.52, 100%, 56%) 0, transparent 65%);
-  background-repeat: no-repeat;
-}
-
 form {
   max-width: 600px;
   margin: auto;

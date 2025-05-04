@@ -2,10 +2,10 @@
 <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="assets/img/carrusel.png" class="d-block w-100">
+            <img src="assets/img/carrusel/carrusel-aprende-smart.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
-            <img src="assets/img/carrusel.png" class="d-block w-100">
+            <img src="assets/img/carrusel/carrusel-aprende-cc.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
             <img src="assets/img/carrusel.png" class="d-block w-100">
@@ -27,7 +27,13 @@
                 <img src="assets/img/shapes/shape-8.png" alt="Decoración" class="img-fluid">
             </div>
             <div class="card-body p-4 shadow-lg">
-                <div class="d-flex flex-wrap justify-content-center text-center gap-4">
+                <div class="d-flex flex-wrap justify-content-center text-center gap-3">
+                    <div class="benefits-item">
+                        <div class="benefits-icon-login mb-2">
+                            <i routerLink="/login" routerLinkActive="active-link" class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="benefits-text">Iniciar Sesión</div>
+                    </div>
                     <div class="benefits-item">
                         <div class="benefits-icon mb-2">
                             <i routerLink="/herramientas/oficina" routerLinkActive="active-link"
@@ -59,17 +65,19 @@
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-md-6 order-md-2">
-                <img src="assets/img/afiliate.png" class="img-fluid associate-img">
+                <img src="assets/img/rec/afiliate-1.jpg" class="img-fluid associate-img">
             </div>
             <div class="col-md-6 order-md-1">
-                <h2 class="section-title">Afiliate</h2>
-                <p class="section-description-ass">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-                    sollicitudin quam nec porta sollicitudin. Nam vitae odio a ante sollicitudin tincidunt.</p>
+                <h2 class="section-title-ass">Afiliate</h2>
+                <p class="section-description-ass">COONADOC es una cooperativa que brinda oportunidades de afiliación a
+                    docentes, personal educativo, pensionados y sus familias. Una vez aprobada tu solicitud, podrás
+                    disfrutar de todos los servicios y participar activamente en la toma de decisiones de la
+                    organización.</p>
             </div>
         </div>
-        <div class="row align-items-center mb-5">
+        <div class="row align-items-center mb-5 pt-5">
             <div class="col-md-6">
-                <img src="assets/img/Razones.png" class="img-fluid benefits-img" alt="Beneficios">
+                <img src="assets/img/rec/quienes-2.png" class="img-fluid benefits-img" alt="Beneficios">
             </div>
             <div class="col-md-6">
                 <h3 class="section-subtitle-ass">¿Quiénes pueden afiliarse?</h3>
@@ -81,26 +89,28 @@
                         <ul>
                             <li>Si son empleados, tengan un vínculo laboral vigente.</li>
                             <li>Si son independientes, demuestren ingresos mensuales permanentes y continuos.</li>
-                         </ul>
+                        </ul>
                     </li>
                     <li>Los pensionados.</li>
                 </ul>
             </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row align-items-center pt-5">
             <div class="col-md-6">
-                <div class="reasons-header mb-4">
-                    <span class="reasons-text">Razones para afiliarse a </span>
+                <div class="reasons-header">
+                    <span class="reasons-text mx-2">Razones para afiliarse </span>
                     <span class="organization-badge">COONADOC</span>
                 </div>
                 <ul class="reasons-list">
                     <li>La asociación no tiene ningún costo.</li>
+                    <li>Participación en excedentes y beneficios sociales.</li>
+                    <li>Acceso a servicios financieros, educativos, y de salud.</li>
                     <li>Beneficios y descuentos especiales con convenios.</li>
                     <li>Actividades recreativas y culturales.</li>
                 </ul>
             </div>
             <div class="col-md-6">
-                <img src="assets/img/Beneficios (2).png" class="img-fluid reasons-img" alt="Razones">
+                <img src="assets/img/rec/razones-1.png" class="img-fluid reasons-img" alt="Razones">
             </div>
         </div>
     </div>
@@ -137,9 +147,9 @@
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
-                <h2 class="section-title">Nuestros servicios</h2>
-                <p class="section-descr-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-                    sollicitudin quam nec porta sollicitudin. Nam vitae odio a ante sollicitudin tincidunt.</p>
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-descr-title">En Coonadoc ofrecemos soluciones crediticias flexibles y accesibles, diseñadas para impulsar tu
+                    crecimiento personal y familiar.</p>
             </div>
             <div class="col-md-6 text-end">
                 <button class="btn btn-slider justify-content-center align-items-center me-2" (click)="scrollLeft()">
@@ -159,10 +169,9 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Créditos</h3>
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
-                                    nec
-                                    porta sollicitudin.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/creditos'">Más información</button>
+                                <p class="mb-4">Créditos estinado a satisfacer múltiples necesidades del asociado y su grupo familiar.</p>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/creditos'">Más
+                                    información</button>
                             </div>
                         </div>
 
@@ -171,10 +180,10 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Educación</h3>
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
-                                    nec
-                                    porta sollicitudin.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/educacion'">Más información</button>
+                                <p class="mb-4">Crédito destinado a invertir en educación superior del 
+                                    asociado, cónyuge e hijos.</p>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/educacion'">Más
+                                    información</button>
                             </div>
                         </div>
 
@@ -183,10 +192,10 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Turismo</h3>
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
-                                    nec
-                                    porta sollicitudin.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/turismo'">Más información</button>
+                                <p class="mb-4">Crédito destinado para viajes nacionales e internacionales 
+                                    promovidos por Coonadoc.</p>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/turismo'">Más
+                                    información</button>
                             </div>
                         </div>
 
@@ -195,10 +204,9 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Auxilios</h3>
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
-                                    nec
-                                    porta sollicitudin.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/auxilios'">Más información</button>
+                                <p class="mb-4">Auxilios solidarios para nacimiento o adopción de hijos, fallecimiento...</p>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/auxilios'">Más
+                                    información</button>
                             </div>
                         </div>
 
@@ -207,10 +215,9 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Seguros</h3>
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam
-                                    nec
-                                    porta sollicitudin.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/seguros'">Más información</button>"
+                                <p class="mb-4">Destinado para seguros de mascotas o de vida a través de nuestros convenios.</p>
+                                <button class="btn btn-more text-white" [routerLink]="'/servicios/seguros'">Más
+                                    información</button>"
                             </div>
                         </div>
                     </div>

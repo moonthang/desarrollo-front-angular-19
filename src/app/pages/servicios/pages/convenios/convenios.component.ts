@@ -18,6 +18,20 @@ export class ConveniosComponent {
   ]
 
   cards = [
+    { categoria: 'Educación',
+      nombre: 'Smart', 
+      descripcion: 'Ofrece cursos de inglés y francés para todos los niveles, desde A1 hasta C1 en inglés.', 
+      logo: 'assets/img/convenios/logo-smart.png', 
+      imagen: 'https://m.smart.edu.co/wp-content/uploads/2021/11/M1-copia-1-scaled-1.webp', 
+      destacado: false
+    },
+    { categoria: 'Entretenimiento',
+      nombre: 'Cine Colombia', 
+      descripcion: 'Cine.', 
+      logo: 'assets/img/convenios/cineco.webp', 
+      imagen: 'https://cloudfront-us-east-1.images.arcpublishing.com/infobae/Y3BD5625LNBE3E2KLC6FLULF7E.jpg', 
+      destacado: false
+    },
     { categoria: 'Turismo',
       nombre: 'El Cielo', 
       descripcion: 'Glamping.', 
