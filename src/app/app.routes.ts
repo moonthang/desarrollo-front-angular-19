@@ -17,6 +17,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { TurismoComponent } from './pages/servicios/pages/turismo/turismo.component';
 import { AuxiliosComponent } from './pages/servicios/pages/auxilios/auxilios.component';
 import { ClasificadosComponent } from './pages/servicios/pages/clasificados/clasificados.component';
+import { ViewClasificadoComponent } from './pages/servicios/pages/clasificados/view-clasificado/view-clasificado.component';
 import { ConveniosComponent } from './pages/servicios/pages/convenios/convenios.component';
 import { CreditosComponent } from './pages/servicios/pages/creditos/creditos.component';
 import { EducacionComponent } from './pages/servicios/pages/educacion/educacion.component';
@@ -47,6 +48,7 @@ export const routes: Routes = [
   { path: 'servicios/seguros', component: SegurosComponent },
   { path: 'servicios/turismo', component: TurismoComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'servicios/view-clasificado/:id', component: ViewClasificadoComponent },
   {
     path: 'dash-admin',
     loadComponent: () => import('./pages/dashboard/dash-admin/dash-admin.component').then(m => m.DashAdminComponent),
@@ -70,6 +72,10 @@ export const routes: Routes = [
       { 
         path: 'manage-clasificado',
         loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent) 
+      },
+      { 
+        path: 'edit-clasificado/:id',
+        loadComponent: () => import('./pages/servicios/pages/clasificados/edit-clasificado/edit-clasificado.component').then(m => m.EditClasificadoComponent) 
       },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]
@@ -97,6 +103,10 @@ export const routes: Routes = [
       { 
         path: 'manage-clasificado',
         loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent) 
+      },
+      { 
+        path: 'edit-clasificado/:id',
+        loadComponent: () => import('./pages/servicios/pages/clasificados/edit-clasificado/edit-clasificado.component').then(m => m.EditClasificadoComponent) 
       },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]

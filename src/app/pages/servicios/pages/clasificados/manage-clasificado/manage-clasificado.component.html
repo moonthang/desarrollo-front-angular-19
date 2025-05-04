@@ -1,13 +1,29 @@
 <div class="list-container">
   <h2>Gestionar Clasificados</h2>
-  <div *ngFor="let post of posts" class="post-card">
-    <h3>{{ post.titulo }}</h3>
-    <p>{{ post.contenido }}</p>
-    <small>Estado: {{ post.estado }}</small>
-    <div class="actions">
-      <button (click)="archivar(post.id)">Archivar</button>
-      <button (click)="eliminar(post.id)">Eliminar</button>
-      <a [routerLink]="['/editar-clasificado', post.id]">Editar</a>
-    </div>
+  <div class="posts-grid">
+    @for (post of posts; track post.id) {
+      <div class="post-card shadow rounded overflow-hidden">
+        @if (post.imagenUrl) {
+          <div class="image-wrapper">
+            <a [routerLink]="['/servicios/view-clasificado', post.id]">
+              <img [src]="post.imagenUrl" alt="Imagen" class="post-image" />
+            </a>
+            <div class="date-badge">{{ post.fechaPublicacion?.toDate() | date:'dd MMM' }}</div>
+          </div>
+        }
+        <div class="post-meta">
+          <span>Por {{ post.autorNombre }}</span>
+        </div>
+        <h3>
+          <a class="title-card" [routerLink]="['/servicios/view-clasificado', post.id]">{{ post.titulo }}</a>
+        </h3>
+        <small>Estado: {{ post.estado }}</small>
+        <div class="actions">
+          <button (click)="archivar(post.id)">Archivar</button>
+          <button class="btn-delete" (click)="eliminar(post.id)">Eliminar</button>
+          <button class="btn-editar" [routerLink]="['/dash-admin/edit-clasificado', post.id]">Editar</button>
+        </div>
+      </div>
+    }
   </div>
 </div>

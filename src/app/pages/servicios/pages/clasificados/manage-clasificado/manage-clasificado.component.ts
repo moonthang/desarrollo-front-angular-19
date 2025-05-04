@@ -10,7 +10,7 @@ import { PostService } from '../post.service';
   templateUrl: './manage-clasificado.component.html',
   styleUrl: './manage-clasificado.component.css'
 })
-export class ManageClasificadoComponent implements OnInit{
+export class ManageClasificadoComponent implements OnInit {
   posts: any[] = [];
 
   constructor(private postService: PostService) {}
@@ -21,7 +21,11 @@ export class ManageClasificadoComponent implements OnInit{
 
   cargarPosts() {
     this.postService.obtenerPosts().then(snapshot => {
-      this.posts = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      this.posts = snapshot.docs.map(doc => ({ 
+        id: doc.id, 
+        ...doc.data(),
+        imagenUrl: doc.data()['imagen'] || doc.data()['imagenUrl'] || null
+      }));
     });
   }
 

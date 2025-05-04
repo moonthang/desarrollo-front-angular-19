@@ -8,10 +8,10 @@ import { db } from '../../../../firebase';
   providedIn: 'root'
 })
 export class PostService {
-  private postsRef = collection(db, 'post');
+  private collectionName = collection(db, 'post');
 
   agregarPost(post: Post) {
-    return addDoc(this.postsRef, {
+    return addDoc(this.collectionName, {
       ...post,
       fechaPublicacion: Timestamp.now(),
       fechaActualizacion: Timestamp.now()
@@ -19,7 +19,7 @@ export class PostService {
   }
 
   obtenerPosts() {
-    const q = query(this.postsRef, orderBy('fechaPublicacion', 'desc'));
+    const q = query(this.collectionName, orderBy('fechaPublicacion', 'desc'));
     return getDocs(q);
   }
 

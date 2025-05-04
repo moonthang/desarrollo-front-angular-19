@@ -1,1 +1,72 @@
-<p>Ahora en nuestro portal publica fácil y rápido tus clasificados!</p>
+<section class="clasificados-section position-relative bg-light text-white">
+    <img src="assets/img/backgrounds/bg_10.png" class="clasificados-img w-100" alt="Equipo COONADOC">
+    <h1 class="clasificados-title position-absolute top-50 start-50 translate-middle display-3 fw-bold">CLASIFICADOS
+    </h1>
+</section>
+
+<section class="clasificados-section-list bg-light position-relative py-5">
+    <div class="container">
+        <div class="content-wrapper d-flex g-2">
+            <div class="main-content">
+                <div class="posts-list d-flex gap-4">
+                    @for (post of visiblePosts; track post.id) {
+                    <div class="post-card rounded overflow-hidden shadow-sm">
+                        @if (post.imagenUrl) {
+                        <div class="image-wrapper position-relative">
+                            <a [routerLink]="['/servicios/view-clasificado', post.id]">
+                                <img [src]="post.imagenUrl" alt="Imagen" class="post-image w-100" />
+                            </a>
+                            <div
+                                class="date-badge">
+                                {{ post.fechaPublicacion?.toDate() | date:'dd MMM' }}</div>
+                        </div>
+                        }
+                        <div class="post-meta text-muted text-uppercase small mt-3 ms-3">
+                            <span>Por {{ post.autorNombre }}</span>
+                        </div>
+                        <h3 class="mt-2 ms-3 mb-2">
+                            <a class="title-card text-decoration-none text-dark"
+                                [routerLink]="['/servicios/view-clasificado', post.id]">{{ post.titulo }}</a>
+                        </h3>
+                        <p class="ms-3 mb-3 small">{{ post.contenido | slice:0:100 }}...</p>
+                        <div class="actions ms-3 mb-3">
+                            <a class="btn-more rounded-pill px-3 py-1 d-inline-flex align-items-center gap-1"
+                                [routerLink]="['/servicios/view-clasificado', post.id]">
+                                Más información <i class="bi bi-arrow-up-right small"></i>
+                            </a>
+                        </div>
+                    </div>
+                    }
+                </div>
+                <div class="pagination d-flex justify-content-center gap-2 mt-5 flex-wrap">
+                    @for (page of pageNumbers; track page) {
+                    <button class="page-btn btn btn-outline-secondary rounded" [class.active]="page === currentPage"
+                        (click)="goToPage(page)">
+                        {{ page }}
+                    </button>
+                    }
+                    @if (currentPage < totalPages) { <button
+                        class="page-btn next btn btn-outline-secondary rounded d-flex align-items-center gap-1"
+                        (click)="nextPage()">
+                        Siguiente <i class="bi bi-chevron-right"></i>
+                        </button>
+                        }
+                </div>
+            </div>
+            <aside class="sidebar rounded p-3">
+                <div class="section">
+                    <h3>Categorías</h3>
+                    <div class="tags">
+                        @for (tag of allTags; track tag) {
+                        <span>{{ tag }}</span>
+                        }
+                    </div>
+                </div>
+                <div class="section">
+                    <h3>Contacto</h3>
+                    <button class="btn btn-contact text-white w-100" [routerLink]="'/contacto'">Contactar</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>

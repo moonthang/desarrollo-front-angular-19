@@ -1,11 +1,13 @@
 .map {
-  width: 100vw; 
+  width: 100%;
+  max-width: 1352px;
+  margin: 0 auto; 
   position: relative;
   overflow: hidden;
 }
 
 .map iframe {
-  width: 100vw !important;
+  width: 100% !important;
   height: 450px;
   border: 0;
   display: block;
@@ -46,6 +48,10 @@
 }
 
 @media (max-width: 992px) {
+  .map iframe {
+    height: 400px;
+  }
+
   .contact-card {
       padding: 0.9rem;
   }
@@ -64,6 +70,9 @@
 }
 
 @media (max-width: 576px) {
+  .map iframe {
+    height: 350px;
+  }
   .contact-card {
       padding: 0.75rem;
   }
