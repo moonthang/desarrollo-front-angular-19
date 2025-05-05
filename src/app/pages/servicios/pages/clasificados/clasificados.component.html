@@ -1,5 +1,5 @@
-<section class="clasificados-section position-relative bg-light text-white">
-    <img src="assets/img/backgrounds/bg_10.png" class="clasificados-img w-100" alt="Equipo COONADOC">
+<section class="clasificados-section position-relative text-white">
+    <img src="assets/img/backgrounds/bg_10.png" class="clasificados-img w-100">
     <h1 class="clasificados-title position-absolute top-50 start-50 translate-middle display-3 fw-bold">CLASIFICADOS
     </h1>
 </section>
@@ -14,10 +14,9 @@
                         @if (post.imagenUrl) {
                         <div class="image-wrapper position-relative">
                             <a [routerLink]="['/servicios/view-clasificado', post.id]">
-                                <img [src]="post.imagenUrl" alt="Imagen" class="post-image w-100" />
+                                <img [src]="post.imagenUrl" class="post-image w-100" />
                             </a>
-                            <div
-                                class="date-badge">
+                            <div class="date-badge">
                                 {{ post.fechaPublicacion?.toDate() | date:'dd MMM' }}</div>
                         </div>
                         }

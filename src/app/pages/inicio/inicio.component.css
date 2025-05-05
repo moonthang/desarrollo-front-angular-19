@@ -4,9 +4,9 @@
   --z-index-2: 2;
 }
 
-/* ==================== */
-/* ESTILOS DEL CARRUSEL */
-/* ==================== */
+/* ========= */
+/*  CARRUSEL */
+/* ========= */
 .carousel-indicators.bottom-indicators {
   position: absolute;
   bottom: 30px;
@@ -51,25 +51,17 @@
   object-position: center;
 }
 
-/* =================== */
-/* BENEFICIOS COONADOC */
-/* =================== */
+
+/* ===== ===== */
+/* BENEFICIOS  */
+/* ========== */
 .benefits-card-container {
-  position: relative;
   margin-top: -35px;
   z-index: 10;
   width: 70%;
 }
 
-.benefits-card {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  background: white;
-}
-
 .benefits-shape {
-  position: absolute;
   right: 0;
   top: 0;
   height: 100%;
@@ -106,7 +98,7 @@
   background-color: var(--color-secundario);
 }
 
-.benefits-icon-login{
+.benefits-icon-login {
   width: 50px;
   height: 50px;
   border-radius: 15px;
@@ -136,56 +128,6 @@
   padding: 0 5px;
 }
 
-
-@media (max-width: 768px) {
-  .benefits-card-container {
-    width: 95%;
-  }
-
-  .card-body {
-    padding: 1rem !important;
-  }
-
-  .benefits-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-  }
-
-  .card-body>.d-flex {
-    justify-content: space-between !important;
-    gap: 5px !important;
-  }
-
-  .benefits-item {
-    width: calc(33.33% - 10px);
-    min-width: auto;
-  }
-}
-
-@media (max-width: 576px) {
-  .benefits-card-container {
-    width: 100%;
-  }
-
-  .benefits-icon-login{
-    width: 38px;
-    height: 38px;
-    font-size: 24px;
-  }
-
-  .benefits-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 24px;
-  }
-
-  .benefits-item {
-    width: 4rem;
-    min-width: auto;
-  }
-}
-
 /* ========== */
 /*  AFILIATE  */
 /* ========== */
@@ -208,8 +150,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 27.375rem;
-  height: 0.188rem;
+  width: 24.5rem;
+  height: 0.155rem;
   background-color: var(--color-principal);
 }
 
@@ -219,15 +161,12 @@
 }
 
 .associate-img {
-  border-radius: 0.625rem;
-  width: 85%;
+  width: 90%;
   height: 20.313rem;
-  object-fit: cover;
-  position: relative;
   border: 0.155rem solid #eee;
 }
 
-.benefits-img,
+.who-img,
 .reasons-img {
   border-radius: 10px;
   width: 100%;
@@ -255,17 +194,17 @@
   border-radius: 0.35rem;
 }
 
-.benefits-list,
+.who-list,
 .reasons-list {
   list-style-type: none;
   padding-left: 0;
 }
 
-.benefits-list ul{
+.who-list ul {
   list-style-type: none;
 }
 
-.benefits-list li,
+.who-list li,
 .reasons-list li {
   font-size: 1.1rem;
   padding: 0.75rem 0;
@@ -274,50 +213,13 @@
   padding-left: 1.5rem;
 }
 
-.benefits-list li::before,
+.who-list li::before,
 .reasons-list li::before {
   content: '✓';
   color: var(--color-secundario);
   font-weight: bold;
   position: absolute;
   left: 0;
-}
-
-@media (max-width: 768px) {
-  .section-title-ass {
-    font-size: 2rem;
-  }
-
-  .section-subtitle-ass {
-    font-size: 1.5rem;
-  }
-
-  .section-subtitle-ass::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20.5rem;
-    height: 0.188rem;
-    background-color: var(--color-principal);
-  }
-  
-
-  .reasons-text,
-  .organization-badge {
-    font-size: 1.2rem;
-  }
-
-  .benefits-img,
-  .reasons-img {
-    margin-top: 2rem;
-    height: 350px;
-  }
-
-  .associate-img {
-    height: 350px;
-    margin-bottom: 2rem;
-  }
 }
 
 /* ========== */
@@ -359,54 +261,6 @@
 .border {
   border: 4px solid #fff !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 768px) {
-  .collage-wrapper {
-    flex-wrap: wrap;
-  }
-
-  .collage-img {
-    flex: 0 0 calc(33.333% - 10px);
-    height: 150px;
-  }
-
-  .incl-left {
-    transform: rotate(-3deg);
-    transition: transform 0.3s ease;
-  }
-
-  .incl-right {
-    transform: rotate(3deg);
-    transition: transform 0.3s ease;
-  }
-
-  .incl-left:hover,
-  .incl-right:hover {
-    transform: scale(1.5);
-  }
-}
-
-@media (max-width: 576px) {
-  .collage-img {
-    flex: 0 0 calc(33.333% - 10px);
-    height: 130px;
-  }
-
-  .incl-left {
-    transform: rotate(-3deg);
-    transition: transform 0.3s ease;
-  }
-
-  .incl-right {
-    transform: rotate(3deg);
-    transition: transform 0.3s ease;
-  }
-
-  .incl-left:hover,
-  .incl-right:hover {
-    transform: scale(1.5);
-  }
 }
 
 /* ========== */
@@ -514,69 +368,6 @@
   color: var(--color-oscuro) !important;
 }
 
-@media (max-width: 576px) {
-  .section-title {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .btn-slider {
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.9rem;
-  }
-
-  .services-track {
-    gap: 0.75rem;
-  }
-
-  .service-card {
-    min-width: 17.5rem;
-    min-height: 25rem;
-    padding: 1.25rem;
-    border-radius: 1.875rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.4rem;
-  }
-
-  .service-card p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .btn-slider {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
-  }
-
-  .services-track {
-    gap: 16px;
-  }
-
-  .service-card {
-    min-width: 320px;
-    min-height: 450px;
-    padding: 25px;
-  }
-
-  .service-card h3 {
-    font-size: 1.6rem;
-  }
-
-  .service-card p {
-    font-size: 1.1rem;
-  }
-}
-
 /* ================= */
 /* EMPRESAS ALIADAS */
 /* ================= */
@@ -627,7 +418,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 991px) {
   .carousel-item-emp img {
     max-height: 3.75rem;
     max-width: 9.375rem;
@@ -677,9 +468,9 @@
   }
 }
 
-/* ================= */
-/* ESTILOS DEL FAQ */
-/* ================= */
+/* ==== */
+/*  FAQ */
+/* ==== */
 .faq-container {
   max-width: 68.75rem;
 }
@@ -687,8 +478,6 @@
 .faq-title {
   font-size: 2.7rem;
   font-weight: bold;
-  color: var(--color-oscuro);
-  margin-bottom: 1.875rem;
 }
 
 .contact-prompt {
@@ -771,7 +560,271 @@
   transform: rotate(180deg);
 }
 
+.btn-faq-more {
+  font-weight: 400;
+}
+
+.bi-arrow-right {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  transform-origin: center center;
+}
+
+.btn-faq-more:hover .bi-arrow-right {
+  transform: translateX(5px) scale(1.2);
+}
+
+/* ============== */
+/*  CLASIFICADOS  */
+/* ============== */
+.clasificados-carousel {
+  position: relative;
+  background-color: var(--color-principal);
+  overflow: hidden;
+}
+
+.credit-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.credit-shape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0) invert(1);
+  opacity: 0.2;
+}
+
+.post-card {
+  background: #fdfdfd;
+  padding: 0 0 20px;
+  flex: 1 1 calc(33.333% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.post-image {
+  width: 100%;
+  height: 220px !important;
+  object-fit: cover;
+  display: block;
+}
+
+.date-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #eef0f1;
+  color: #111;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #777;
+  margin: 18px 20px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 20px 10px;
+}
+
+h3 a {
+  text-decoration: none;
+  color: #111;
+}
+
+small {
+  display: block;
+  margin: 0 20px 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+.btn-info {
+  color: var(--color-principal);
+  background-color: white;
+  border: 0.125rem solid var(--color-principal);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  gap: 5px;
+}
+
+.btn-info i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-info:hover i {
+  transform: scale(1.3);
+}
+
+.btn-info:hover {
+  background-color: var(--color-principal);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.car-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* ========== */
+/*   MEDIAS   */
+/* ========== */
 @media (max-width: 768px) {
+
+  /* BENEFICIOS */
+  .benefits-card-container {
+    width: 95%;
+  }
+
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .benefits-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .card-body>.d-flex {
+    justify-content: space-between !important;
+    gap: 5px !important;
+  }
+
+  .benefits-item {
+    width: calc(33.33% - 10px);
+    min-width: auto;
+  }
+
+  /* AFILIATE */
+  .section-title-ass {
+    font-size: 2rem;
+  }
+
+  .section-subtitle-ass {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle-ass::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20.5rem;
+    height: 0.155rem;
+    background-color: var(--color-principal);
+  }
+
+  .reasons-text,
+  .organization-badge {
+    font-size: 1.5rem;
+  }
+
+  .benefits-img,
+  .reasons-img {
+    margin-top: 2rem;
+    height: 350px;
+  }
+
+  .associate-img {
+    height: 350px;
+    margin-bottom: 2rem;
+  }
+
+  /* COLLAGE */
+  .collage-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .collage-img {
+    flex: 0 0 calc(33.333% - 10px);
+    height: 150px;
+  }
+
+  .incl-left {
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-right {
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-left:hover,
+  .incl-right:hover {
+    transform: scale(1.5);
+  }
+
+  /* SERVICIOS */
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .btn-slider {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .services-track {
+    gap: 16px;
+  }
+
+  .service-card {
+    min-width: 320px;
+    min-height: 450px;
+    padding: 25px;
+  }
+
+  .service-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .service-card p {
+    font-size: 1.1rem;
+  }
+
+  /* FAQ */
   .faq-title {
     font-size: 2rem;
     text-align: center;
@@ -807,9 +860,125 @@
     font-size: 0.95rem;
     right: 0.8rem;
   }
+
+  /* CLASIFICADO */
+  .post-card {
+    flex: 1 1 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .d-flex.gap-4.flex-wrap {
+    flex-direction: column;
+    gap: 1rem !important;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: auto;
+    transform: none;
+  }
+  
+  .carousel-control-prev {
+    left: calc(50% - 50px);
+  }
+  
+  .carousel-control-next {
+    right: calc(50% - 50px);
+  }
+  
+  .post-image {
+    height: 180px !important;
+  }
+  
+  h3 {
+    font-size: 18px;
+  }
+  
+  .post-meta {
+    font-size: 12px;
+  }
+  
+  .btn-info {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+  }
 }
 
 @media (max-width: 576px) {
+  .benefits-card-container {
+    width: 100%;
+  }
+
+  .benefits-icon-login {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  .benefits-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  .benefits-item {
+    width: 4rem;
+    min-width: auto;
+  }
+
+  /* COLLAGE */
+  .collage-img {
+    flex: 0 0 calc(33.333% - 10px);
+    height: 130px;
+  }
+
+  .incl-left {
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-right {
+    transform: rotate(3deg);
+    transition: transform 0.3s ease;
+  }
+
+  .incl-left:hover,
+  .incl-right:hover {
+    transform: scale(1.5);
+  }
+
+  /* SERVICIOS */
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .btn-slider {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .services-track {
+    gap: 0.75rem;
+  }
+
+  .service-card {
+    min-width: 17.5rem;
+    min-height: 25rem;
+    padding: 1.25rem;
+    border-radius: 1.875rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+  }
+
+  /* FAQ */
   .faq-title {
     font-size: 2rem;
     text-align: center;
@@ -838,7 +1007,3 @@
     right: 0.6rem;
   }
 }
-
-/* ============ */
-/* CLASIFICADOS */
-/* ============ */

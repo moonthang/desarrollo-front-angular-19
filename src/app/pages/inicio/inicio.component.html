@@ -21,10 +21,10 @@
 
 <!-- Beneficios -->
 <section class="container position-relative  benefits-section">
-    <div class="benefits-card-container mx-auto">
-        <div class="card benefits-card shadow">
-            <div class="benefits-shape">
-                <img src="assets/img/shapes/shape-8.png" alt="Decoración" class="img-fluid">
+    <div class="benefits-card-container mx-auto position-relative">
+        <div class="card benefits-card shadow overflow-hidden position-relative rounded-5">
+            <div class="benefits-shape position-absolute">
+                <img src="assets/img/shapes/shape-19.png" alt="Decoración" class="img-fluid">
             </div>
             <div class="card-body p-4 shadow-lg">
                 <div class="d-flex flex-wrap justify-content-center text-center gap-3">
@@ -43,8 +43,8 @@
                     </div>
                     <div class="benefits-item">
                         <div class="benefits-icon mb-2">
-                            <i href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=328&searchedCategoryId=&searchedAgreementName=COOPERATIVA%20NACIONAL%20DE%20DOCENTES%20COONADOC"
-                                class="bi bi-cash-stack"></i>
+                            <a href="https://www.mipagoamigo.com/MPA_WebSite/ServicePayments/StartPayment?id=328&searchedCategoryId=&searchedAgreementName=COOPERATIVA%20NACIONAL%20DE%20DOCENTES%20COONADOC"
+                                target="_blank" rel="noopener noreferrer" class="bi bi-cash-stack text-white"></a>
                         </div>
                         <div class="benefits-text">Mi Pago Amigo</div>
                     </div>
@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-md-6 order-md-2">
-                <img src="assets/img/rec/afiliate-1.jpg" class="img-fluid associate-img">
+                <img src="assets/img/rec/afiliate-1.jpg" class="img-fluid associate-img rounded-4 object-fit-cover">
             </div>
             <div class="col-md-6 order-md-1">
                 <h2 class="section-title-ass">Afiliate</h2>
@@ -77,11 +77,11 @@
         </div>
         <div class="row align-items-center mb-5 pt-5">
             <div class="col-md-6">
-                <img src="assets/img/rec/quienes-2.png" class="img-fluid benefits-img" alt="Beneficios">
+                <img src="assets/img/rec/quienes-2.png" class="img-fluid who-img">
             </div>
             <div class="col-md-6">
                 <h3 class="section-subtitle-ass">¿Quiénes pueden afiliarse?</h3>
-                <ul class="benefits-list mt-3">
+                <ul class="who-list mt-3">
                     <li>Los docentes y directivos docentes oficiales.</li>
                     <li>Personal administrativo activo en el sector educativo oficial.</li>
                     <li>Familiares como: padres, hijos, nietos, hermanos, abuelos, sobrinos y tíos.</li>
@@ -98,7 +98,7 @@
         <div class="row align-items-center pt-5">
             <div class="col-md-6">
                 <div class="reasons-header">
-                    <span class="reasons-text mx-2">Razones para afiliarse </span>
+                    <span class="reasons-text mx-2">Beneficios </span>
                     <span class="organization-badge">COONADOC</span>
                 </div>
                 <ul class="reasons-list">
@@ -118,7 +118,7 @@
 
 <!-- Collage -->
 <section class="collage-section">
-    <div class="container my-5">
+    <div class="container my-5 p-5">
         <div class="collage-wrapper">
             <div class="incl-left">
                 <img src="assets/img/actividades/actividad1.jpg" class="collage-img rounded border">
@@ -148,7 +148,8 @@
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
                 <h2 class="section-title">Nuestros Servicios</h2>
-                <p class="section-descr-title">En Coonadoc ofrecemos soluciones crediticias flexibles y accesibles, diseñadas para impulsar tu
+                <p class="section-descr-title">En Coonadoc ofrecemos soluciones crediticias flexibles y accesibles,
+                    diseñadas para impulsar tu
                     crecimiento personal y familiar.</p>
             </div>
             <div class="col-md-6 text-end">
@@ -169,7 +170,8 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Créditos</h3>
-                                <p class="mb-4">Créditos estinado a satisfacer múltiples necesidades del asociado y su grupo familiar.</p>
+                                <p class="mb-4">Créditos estinado a satisfacer múltiples necesidades del asociado y su
+                                    grupo familiar.</p>
                                 <button class="btn btn-more text-white" [routerLink]="'/servicios/creditos'">Más
                                     información</button>
                             </div>
@@ -180,7 +182,7 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Educación</h3>
-                                <p class="mb-4">Crédito destinado a invertir en educación superior del 
+                                <p class="mb-4">Crédito destinado a invertir en educación superior del
                                     asociado, cónyuge e hijos.</p>
                                 <button class="btn btn-more text-white" [routerLink]="'/servicios/educacion'">Más
                                     información</button>
@@ -192,7 +194,7 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Turismo</h3>
-                                <p class="mb-4">Crédito destinado para viajes nacionales e internacionales 
+                                <p class="mb-4">Crédito destinado para viajes nacionales e internacionales
                                     promovidos por Coonadoc.</p>
                                 <button class="btn btn-more text-white" [routerLink]="'/servicios/turismo'">Más
                                     información</button>
@@ -204,7 +206,8 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Auxilios</h3>
-                                <p class="mb-4">Auxilios solidarios para nacimiento o adopción de hijos, fallecimiento...</p>
+                                <p class="mb-4">Auxilios solidarios para nacimiento o adopción de hijos,
+                                    fallecimiento...</p>
                                 <button class="btn btn-more text-white" [routerLink]="'/servicios/auxilios'">Más
                                     información</button>
                             </div>
@@ -215,7 +218,8 @@
                             <div class="card-overlay"></div>
                             <div class="card-content">
                                 <h3 class="text-white position-relative mb-2">Seguros</h3>
-                                <p class="mb-4">Destinado para seguros de mascotas o de vida a través de nuestros convenios.</p>
+                                <p class="mb-4">Destinado para seguros de mascotas o de vida a través de nuestros
+                                    convenios.</p>
                                 <button class="btn btn-more text-white" [routerLink]="'/servicios/seguros'">Más
                                     información</button>"
                             </div>
@@ -261,37 +265,106 @@
 </section>
 
 <!-- FAQ -->
-<div class="faq-container py-5 my-5 mx-auto px-3">
-    <div class="row">
-        <div class="col-md-4">
-            <h1 class="faq-title mb-4">Preguntas Frecuentes</h1>
-            <div class="contact-prompt">
-                <p class="mb-3">¿No encuentra la respuesta? Le ayudamos</p>
-                <button class="btn btn-contact text-white" [routerLink]="'/contacto'">Contáctenos</button>
+<section class="faq-container py-5 my-5 mx-auto">
+    <div class="container">
+        <div class="row gap-4">
+            <div class="col-md-4">
+                <h1 class="faq-title mb-4">Preguntas Frecuentes</h1>
+                <div class="contact-prompt">
+                    <p class="mb-3">¿No encuentra la respuesta? Le ayudamos</p>
+                    <button class="btn btn-contact text-white" [routerLink]="'/contacto'">Contáctenos</button>
+                </div>
             </div>
-        </div>
-        <div class="col-md-7">
-            <div class="accordion" id="faqAccordion">
-                @for (pregunta of preguntasFrecuentes; track $index) {
-                <div class="accordion-item border-0">
-                    <h2 class="accordion-header" [id]="'heading' + $index">
-                        <button class="accordion-button collapsed py-3 pe-5 position-relative" type="button"
-                            data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + $index" aria-expanded="false"
-                            [attr.aria-controls]="'collapse' + $index">
-                            {{ pregunta.pregunta }}
-                            <i class="bi bi-caret-down-fill position-absolute end-0 me-3 transition-all"></i>
-                        </button>
-                    </h2>
-                    <div [id]="'collapse' + $index" class="accordion-collapse collapse"
-                        [attr.aria-labelledby]="'heading' + $index" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            {{ pregunta.respuesta }}
+            <div class="col-md-7">
+                <div class="accordion" id="faqAccordion">
+                    @for (pregunta of preguntasFrecuentes; track $index) {
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header" [id]="'heading' + $index">
+                            <button class="accordion-button collapsed py-3 pe-5 position-relative" type="button"
+                                data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + $index"
+                                aria-expanded="false" [attr.aria-controls]="'collapse' + $index">
+                                {{ pregunta.pregunta }}
+                                <i class="bi bi-caret-down-fill position-absolute end-0 me-3 transition-all"></i>
+                            </button>
+                        </h2>
+                        <div [id]="'collapse' + $index" class="accordion-collapse collapse"
+                            [attr.aria-labelledby]="'heading' + $index" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                {{ pregunta.respuesta }}
+                            </div>
+                        </div>
+                        <div class="accordion-divider"></div>
+                    </div>
+                    }
+                    <div class="accordion-item border-0 pt-2">
+                        <div class="accordion-footer p-3 text-center">
+                            <button class="btn btn-faq-more" [routerLink]="'/faq'">
+                                Ver todas las preguntas frecuentes
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="accordion-divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clasificados -->
+<section class="clasificados-carousel p-5">
+    <div class="credit-shape">
+        <img src="assets/img/shapes/shape-20.png" alt="Decoración" class="img-fluid">
+    </div>
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="empresas-text mx-2 text-white">Últimas </span>
+            <span class="organization-badge">Novedades</span>
+        </div>
+        <div id="clasificadosCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+                @for (grupo of clasificadosPorGrupo; track grupo; let i = $index) {
+                <div class="carousel-item" [class.active]="i === 0">
+                    <div class="d-flex gap-4 flex-wrap">
+                        @for (post of grupo; track post.id) {
+                        <div class="post-card rounded-3 overflow-hidden shadow">
+                            <div class="image-wrapper position-relative">
+                                @if (post.imagenUrl) {
+                                <a [routerLink]="['/servicios/view-clasificado', post.id]">
+                                    <img [src]="post.imagenUrl" class="post-image w-100" />
+                                </a>
+                                <div class="date-badge">
+                                    {{ post.fechaPublicacion?.toDate() | date:'dd MMM' }}
+                                </div>
+                                }
+                            </div>
+                            <div class="post-meta text-muted text-uppercase small mt-3 ms-3">
+                                <span>Por {{ post.autorNombre }}</span>
+                            </div>
+                            <h3 class="mt-2 ms-3 mb-2">
+                                <a class="title-card text-decoration-none text-dark"
+                                    [routerLink]="['/servicios/view-clasificado', post.id]">
+                                    {{ post.titulo }}
+                                </a>
+                            </h3>
+                            <p class="ms-3 mb-3 small">{{ post.contenido | slice:0:100 }}...</p>
+                            <div class="actions ms-3 mb-3">
+                                <a class="btn-info rounded-pill px-3 py-1 align-items-center gap-1"
+                                    [routerLink]="['/servicios/view-clasificado', post.id]">
+                                    Más información <i class="bi bi-arrow-up-right small"></i>
+                                </a>
+                            </div>
+                        </div>
+                        }
+                    </div>
                 </div>
                 }
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#clasificadosCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon car-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#clasificadosCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon car-icon"></span>
+        </button>
     </div>
-</div>
+</section>

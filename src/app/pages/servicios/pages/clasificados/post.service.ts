@@ -7,6 +7,7 @@ import { db } from '../../../../firebase';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PostService {
   private collectionName = collection(db, 'post');
 

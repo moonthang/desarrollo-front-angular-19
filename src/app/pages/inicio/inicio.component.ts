@@ -1,16 +1,48 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
+import { PostService } from '../servicios/pages/clasificados/post.service';
 
 @Component({
   selector: 'app-inicio',
-  standalone: true, 
+  standalone: true,
   imports: [RouterModule, CommonModule],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
-export class InicioComponent {
+
+export class InicioComponent implements OnInit {
+  clasificadosPosts: any[] = [];
+  clasificadosPorGrupo: any[][] = [];
+
+  constructor(private postService: PostService) {}
+
+  ngOnInit() {
+    this.cargarClasificados();
+  }
+
+  cargarClasificados() {
+    this.postService.obtenerPosts().then(snapshot => {
+      const posts = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+        imagenUrl: doc.data()['imagen'] || doc.data()['imagenUrl'] || null,
+        fechaPublicacion: doc.data()['fechaPublicacion']
+      }));
+
+      this.clasificadosPosts = posts.slice(0, 6);
+      this.dividirClasificados();
+    });
+  }
+
+  dividirClasificados() {
+    const grupos: any[][] = [];
+    const size = 3;
+    for (let i = 0; i < this.clasificadosPosts.length; i += size) {
+      grupos.push(this.clasificadosPosts.slice(i, i + size));
+    }
+    this.clasificadosPorGrupo = grupos;
+  }
 
   empresas = [
     { nombre: 'U La Gran Colombia', logo: 'assets/img/convenios/u_la_gran_colombia.png' },
