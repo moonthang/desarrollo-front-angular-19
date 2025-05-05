@@ -68,8 +68,8 @@
                 <img src="assets/img/rec/afiliate-1.jpg" class="img-fluid associate-img rounded-4 object-fit-cover">
             </div>
             <div class="col-md-6 order-md-1">
-                <h2 class="section-title-ass">Afiliate</h2>
-                <p class="section-description-ass">COONADOC es una cooperativa que brinda oportunidades de afiliación a
+                <h2 class="section-title-ass mb-3">AFILIATE</h2>
+                <p class="section-description-ass mb-3">COONADOC es una cooperativa que brinda oportunidades de afiliación a
                     docentes, personal educativo, pensionados y sus familias. Una vez aprobada tu solicitud, podrás
                     disfrutar de todos los servicios y participar activamente en la toma de decisiones de la
                     organización.</p>
@@ -77,7 +77,7 @@
         </div>
         <div class="row align-items-center mb-5 pt-5">
             <div class="col-md-6">
-                <img src="assets/img/rec/quienes-2.png" class="img-fluid who-img">
+                <img src="assets/img/rec/quienes-2.png" class="img-fluid who-img object-fit-contain">
             </div>
             <div class="col-md-6">
                 <h3 class="section-subtitle-ass">¿Quiénes pueden afiliarse?</h3>
@@ -97,7 +97,7 @@
         </div>
         <div class="row align-items-center pt-5">
             <div class="col-md-6">
-                <div class="reasons-header">
+                <div class="reasons-header d-flex align-items-center mb-3">
                     <span class="reasons-text mx-2">Beneficios </span>
                     <span class="organization-badge">COONADOC</span>
                 </div>
@@ -110,7 +110,7 @@
                 </ul>
             </div>
             <div class="col-md-6">
-                <img src="assets/img/rec/razones-1.png" class="img-fluid reasons-img" alt="Razones">
+                <img src="assets/img/rec/razones-1.png" class="img-fluid reasons-img object-fit-contain" alt="Razones">
             </div>
         </div>
     </div>
@@ -119,7 +119,7 @@
 <!-- Collage -->
 <section class="collage-section">
     <div class="container my-5 p-5">
-        <div class="collage-wrapper">
+        <div class="collage-wrapper d-flex flex-wrap justify-content-center">
             <div class="incl-left">
                 <img src="assets/img/actividades/actividad1.jpg" class="collage-img rounded border">
             </div>
@@ -147,16 +147,16 @@
     <div class="container">
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
-                <h2 class="section-title">Nuestros Servicios</h2>
+                <h2 class="section-title">NUESTROS SERVICIOS</h2>
                 <p class="section-descr-title">En Coonadoc ofrecemos soluciones crediticias flexibles y accesibles,
                     diseñadas para impulsar tu
                     crecimiento personal y familiar.</p>
             </div>
             <div class="col-md-6 text-end">
-                <button class="btn btn-slider justify-content-center align-items-center me-2" (click)="scrollLeft()">
+                <button class="btn btn-slider justify-content-center align-items-center me-2 d-inline-flex rounded-circle" (click)="scrollLeft()">
                     <i class="bi bi-chevron-left"></i>
                 </button>
-                <button class="btn btn-slider justify-content-center align-items-center me-2" (click)="scrollRight()">
+                <button class="btn btn-slider justify-content-center align-items-center me-2 d-inline-flex rounded-circle" (click)="scrollRight()">
                     <i class="bi bi-chevron-right"></i>
                 </button>
             </div>
@@ -165,62 +165,62 @@
             <div class="col-12">
                 <div class="services-wrapper" #ServiciosWrapper>
                     <div class="services-track d-flex gap-3 py-3" #ServiciosTrack>
-                        <div class="service-card"
+                        <div class="service-card p-4 shadow position-relative overflow-hidden d-flex align-items-end rounded-5"
                             style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
-                            <div class="card-overlay"></div>
-                            <div class="card-content">
+                            <div class="card-overlay position-absolute"></div>
+                            <div class="card-content position-relative">
                                 <h3 class="text-white position-relative mb-2">Créditos</h3>
                                 <p class="mb-4">Créditos estinado a satisfacer múltiples necesidades del asociado y su
                                     grupo familiar.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/creditos'">Más
+                                <button class="btn btn-more text-white border-0 px-3 py-2 rounded-5" [routerLink]="'/servicios/creditos'">Más
                                     información</button>
                             </div>
                         </div>
 
-                        <div class="service-card"
+                        <div class="service-card p-4 shadow position-relative overflow-hidden d-flex align-items-end rounded-5"
                             style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
-                            <div class="card-overlay"></div>
-                            <div class="card-content">
+                            <div class="card-overlay position-absolute"></div>
+                            <div class="card-content position-relative">
                                 <h3 class="text-white position-relative mb-2">Educación</h3>
                                 <p class="mb-4">Crédito destinado a invertir en educación superior del
                                     asociado, cónyuge e hijos.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/educacion'">Más
+                                <button class="btn btn-more text-white border-0 px-3 py-2 rounded-5" [routerLink]="'/servicios/educacion'">Más
                                     información</button>
                             </div>
                         </div>
 
-                        <div class="service-card"
+                        <div class="service-card p-4 shadow position-relative overflow-hidden d-flex align-items-end rounded-5"
                             style="background-image: url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
-                            <div class="card-overlay"></div>
-                            <div class="card-content">
+                            <div class="card-overlay position-absolute"></div>
+                            <div class="card-content position-relative">
                                 <h3 class="text-white position-relative mb-2">Turismo</h3>
                                 <p class="mb-4">Crédito destinado para viajes nacionales e internacionales
                                     promovidos por Coonadoc.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/turismo'">Más
+                                <button class="btn btn-more text-white border-0 px-3 py-2 rounded-5" [routerLink]="'/servicios/turismo'">Más
                                     información</button>
                             </div>
                         </div>
 
-                        <div class="service-card"
+                        <div class="service-card p-4 shadow position-relative overflow-hidden d-flex align-items-end rounded-5"
                             style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
-                            <div class="card-overlay"></div>
-                            <div class="card-content">
+                            <div class="card-overlay position-absolute"></div>
+                            <div class="card-content position-relative">
                                 <h3 class="text-white position-relative mb-2">Auxilios</h3>
                                 <p class="mb-4">Auxilios solidarios para nacimiento o adopción de hijos,
                                     fallecimiento...</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/auxilios'">Más
+                                <button class="btn btn-more text-white border-0 px-3 py-2 rounded-5" [routerLink]="'/servicios/auxilios'">Más
                                     información</button>
                             </div>
                         </div>
 
-                        <div class="service-card"
+                        <div class="service-card p-4 shadow position-relative overflow-hidden d-flex align-items-end rounded-5"
                             style="background-image: url('https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
-                            <div class="card-overlay"></div>
-                            <div class="card-content">
+                            <div class="card-overlay position-absolute"></div>
+                            <div class="card-content position-relative">
                                 <h3 class="text-white position-relative mb-2">Seguros</h3>
                                 <p class="mb-4">Destinado para seguros de mascotas o de vida a través de nuestros
                                     convenios.</p>
-                                <button class="btn btn-more text-white" [routerLink]="'/servicios/seguros'">Más
+                                <button class="btn btn-more text-white border-0 px-3 py-2 rounded-5" [routerLink]="'/servicios/seguros'">Más
                                     información</button>"
                             </div>
                         </div>
@@ -270,9 +270,9 @@
         <div class="row gap-4">
             <div class="col-md-4">
                 <h1 class="faq-title mb-4">Preguntas Frecuentes</h1>
-                <div class="contact-prompt">
+                <div class="contact-prompt position-sticky">
                     <p class="mb-3">¿No encuentra la respuesta? Le ayudamos</p>
-                    <button class="btn btn-contact text-white" [routerLink]="'/contacto'">Contáctenos</button>
+                    <button class="btn btn-contact text-white px-3 py-2 rounded-5" [routerLink]="'/contacto'">Contáctenos</button>
                 </div>
             </div>
             <div class="col-md-7">

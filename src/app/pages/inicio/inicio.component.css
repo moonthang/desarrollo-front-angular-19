@@ -4,9 +4,6 @@
   --z-index-2: 2;
 }
 
-/* ========= */
-/*  CARRUSEL */
-/* ========= */
 .carousel-indicators.bottom-indicators {
   position: absolute;
   bottom: 30px;
@@ -30,9 +27,9 @@
   height: 350px;
 }
 
-@media (min-width: 768px) {
+@media (min-width:768px) {
   #customCarousel {
-    height: auto;
+      height: auto;
   }
 }
 
@@ -51,10 +48,6 @@
   object-position: center;
 }
 
-
-/* ===== ===== */
-/* BENEFICIOS  */
-/* ========== */
 .benefits-card-container {
   margin-top: -35px;
   z-index: 10;
@@ -86,18 +79,7 @@
   flex-shrink: 0;
 }
 
-.benefits-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 30px;
-  background-color: var(--color-secundario);
-}
-
+.benefits-icon,
 .benefits-icon-login {
   width: 50px;
   height: 50px;
@@ -107,6 +89,13 @@
   justify-content: center;
   color: #fff;
   font-size: 30px;
+}
+
+.benefits-icon {
+  background-color: var(--color-secundario);
+}
+
+.benefits-icon-login {
   background-color: var(--color-principal);
 }
 
@@ -128,19 +117,14 @@
   padding: 0 5px;
 }
 
-/* ========== */
-/*  AFILIATE  */
-/* ========== */
 .section-title-ass {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
 }
 
 .section-subtitle-ass {
   font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
 }
@@ -171,13 +155,6 @@
   border-radius: 10px;
   width: 100%;
   height: 23rem;
-  object-fit: contain;
-}
-
-.reasons-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
 }
 
 .reasons-text {
@@ -222,15 +199,9 @@
   left: 0;
 }
 
-/* ========== */
-/*  COLLAGE   */
-/* ========== */
 .collage-wrapper {
-  display: flex;
-  flex-wrap: wrap;
   gap: 0;
   margin: 0 auto;
-  justify-content: center;
 }
 
 .collage-img {
@@ -241,14 +212,17 @@
   margin-left: -40px;
 }
 
+.incl-left,
+.incl-right {
+  transition: transform 0.3s ease;
+}
+
 .incl-left {
   transform: rotate(-3deg);
-  transition: transform 0.3s ease;
 }
 
 .incl-right {
   transform: rotate(3deg);
-  transition: transform 0.3s ease;
 }
 
 .incl-left:hover,
@@ -263,9 +237,6 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ========== */
-/*  SERVICIOS */
-/* ========== */
 .services-section {
   background-image: url("/assets/img/backgrounds/bg-services.png");
   background-size: cover;
@@ -274,7 +245,7 @@
 }
 
 .section-title {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -286,10 +257,8 @@
 .btn-slider {
   background-color: #d2eace;
   border: 0.125rem solid var(--color-claro);
-  border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  display: inline-flex;
   transition: all 0.3s ease;
 }
 
@@ -312,16 +281,9 @@
 .service-card {
   background-size: cover;
   background-position: center;
-  border-radius: 3.125rem;
-  padding: 1.875rem;
   min-width: 23.75rem;
   min-height: 29.375rem;
-  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.15);
-  position: relative;
-  overflow: hidden;
   transition: transform 0.3s ease;
-  display: flex;
-  align-items: flex-end;
 }
 
 .service-card:hover {
@@ -329,7 +291,6 @@
 }
 
 .card-overlay {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -339,10 +300,7 @@
 }
 
 .card-content {
-  position: relative;
   z-index: 2;
-  text-align: left;
-  width: 100%;
 }
 
 .service-card h3 {
@@ -356,9 +314,6 @@
 
 .btn-more {
   background-color: var(--color-principal);
-  border: none;
-  padding: 0.625rem 1.25rem;
-  border-radius: 1.875rem;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -368,9 +323,6 @@
   color: var(--color-oscuro) !important;
 }
 
-/* ================= */
-/* EMPRESAS ALIADAS */
-/* ================= */
 .carousel-item-emp img {
   max-height: 6.25rem;
   max-width: 12.5rem;
@@ -418,59 +370,56 @@
   font-weight: bold;
 }
 
-@media (max-width: 991px) {
+@media (max-width:991px) {
   .carousel-item-emp img {
-    max-height: 3.75rem;
-    max-width: 9.375rem;
-    margin: 0.5rem;
+      max-height: 3.75rem;
+      max-width: 9.375rem;
+      margin: 0.5rem;
   }
 
   #carouselEmpresas .carousel-control-prev,
   #carouselEmpresas .carousel-control-next {
-    display: none;
+      display: none;
   }
 
   .carousel-inner-emp {
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    flex-wrap: nowrap;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      flex-wrap: nowrap;
   }
 
   .carousel-inner-emp::-webkit-scrollbar {
-    display: none;
+      display: none;
   }
 
   .carousel-item-emp {
-    display: inline-flex;
-    width: auto;
-    white-space: nowrap;
-    scroll-snap-align: start;
-    flex: 0 0 auto;
+      display: inline-flex;
+      width: auto;
+      white-space: nowrap;
+      scroll-snap-align: start;
+      flex: 0 0 auto;
   }
 
   .carousel-item-emp .d-flex {
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    padding: 0 0.938rem;
-    gap: 1.25rem !important;
+      flex-wrap: nowrap !important;
+      justify-content: flex-start !important;
+      padding: 0 0.938rem;
+      gap: 1.25rem !important;
   }
 
   .carousel-inner-emp {
-    transform: none !important;
-    transition: none !important;
+      transform: none !important;
+      transition: none !important;
   }
 
   .carousel-item-emp {
-    display: inline-flex !important;
-    opacity: 1 !important;
-    margin-right: 0 !important;
+      display: inline-flex !important;
+      opacity: 1 !important;
+      margin-right: 0 !important;
   }
 }
 
-/* ==== */
-/*  FAQ */
-/* ==== */
 .faq-container {
   max-width: 68.75rem;
 }
@@ -481,7 +430,6 @@
 }
 
 .contact-prompt {
-  position: sticky;
   top: 1.25rem;
   padding-right: 1.875rem;
 }
@@ -494,12 +442,9 @@
 
 .btn-contact {
   background-color: var(--color-principal);
-  padding: 0.938rem 2.188rem;
-  border-radius: 1.875rem;
   font-size: 1.3rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  border: none;
 }
 
 .btn-contact:hover {
@@ -574,9 +519,6 @@
   transform: translateX(5px) scale(1.2);
 }
 
-/* ============== */
-/*  CLASIFICADOS  */
-/* ============== */
 .clasificados-carousel {
   position: relative;
   background-color: var(--color-principal);
@@ -704,306 +646,293 @@ small {
   height: 30px;
 }
 
-/* ========== */
-/*   MEDIAS   */
-/* ========== */
-@media (max-width: 768px) {
-
-  /* BENEFICIOS */
+@media (max-width:768px) {
   .benefits-card-container {
-    width: 95%;
+      width: 95%;
   }
 
   .card-body {
-    padding: 1rem !important;
+      padding: 1rem !important;
   }
 
   .benefits-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
   }
 
   .card-body>.d-flex {
-    justify-content: space-between !important;
-    gap: 5px !important;
+      justify-content: space-between !important;
+      gap: 5px !important;
   }
 
   .benefits-item {
-    width: calc(33.33% - 10px);
-    min-width: auto;
+      width: calc(33.33% - 10px);
+      min-width: auto;
   }
 
-  /* AFILIATE */
   .section-title-ass {
-    font-size: 2rem;
+      font-size: 2rem;
   }
 
   .section-subtitle-ass {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .section-subtitle-ass::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 20.5rem;
-    height: 0.155rem;
-    background-color: var(--color-principal);
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20.5rem;
+      height: 0.155rem;
+      background-color: var(--color-principal);
   }
 
   .reasons-text,
   .organization-badge {
-    font-size: 1.5rem;
+      font-size: 1.5rem;
   }
 
   .benefits-img,
   .reasons-img {
-    margin-top: 2rem;
-    height: 350px;
+      margin-top: 2rem;
+      height: 350px;
   }
 
   .associate-img {
-    height: 350px;
-    margin-bottom: 2rem;
+      height: 350px;
+      margin-bottom: 2rem;
   }
 
-  /* COLLAGE */
   .collage-wrapper {
-    flex-wrap: wrap;
+      flex-wrap: wrap;
   }
 
   .collage-img {
-    flex: 0 0 calc(33.333% - 10px);
-    height: 150px;
+      flex: 0 0 calc(33.333% - 10px);
+      height: 150px;
   }
 
   .incl-left {
-    transform: rotate(-3deg);
-    transition: transform 0.3s ease;
+      transform: rotate(-3deg);
+      transition: transform 0.3s ease;
   }
 
   .incl-right {
-    transform: rotate(3deg);
-    transition: transform 0.3s ease;
+      transform: rotate(3deg);
+      transition: transform 0.3s ease;
   }
 
   .incl-left:hover,
   .incl-right:hover {
-    transform: scale(1.5);
+      transform: scale(1.5);
   }
 
-  /* SERVICIOS */
   .section-title {
-    font-size: 2.5rem;
-    text-align: center;
+      font-size: 2.5rem;
+      text-align: center;
   }
 
   .btn-slider {
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
   }
 
   .services-track {
-    gap: 16px;
+      gap: 16px;
   }
 
   .service-card {
-    min-width: 320px;
-    min-height: 450px;
-    padding: 25px;
+      min-width: 320px;
+      min-height: 450px;
+      padding: 25px;
   }
 
   .service-card h3 {
-    font-size: 1.6rem;
+      font-size: 1.6rem;
   }
 
   .service-card p {
-    font-size: 1.1rem;
+      font-size: 1.1rem;
   }
 
-  /* FAQ */
   .faq-title {
-    font-size: 2rem;
-    text-align: center;
+      font-size: 2rem;
+      text-align: center;
   }
 
   .contact-prompt {
-    padding-right: 0;
-    position: relative;
-    top: auto;
-    margin-bottom: 1.25rem;
-    text-align: center;
+      padding-right: 0;
+      position: relative;
+      top: auto;
+      margin-bottom: 1.25rem;
+      text-align: center;
   }
 
   .contact-prompt p {
-    font-size: 1.1rem;
+      font-size: 1.1rem;
   }
 
   .btn-contact {
-    padding: 0.75rem 2.5rem;
-    font-size: 1.1rem;
+      padding: 0.75rem 2.5rem;
+      font-size: 1.1rem;
   }
 
   .accordion-button {
-    font-size: 1.2rem;
-    padding-right: 2rem !important;
+      font-size: 1.2rem;
+      padding-right: 2rem !important;
   }
 
   .accordion-body {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
   .accordion-button .bi {
-    font-size: 0.95rem;
-    right: 0.8rem;
+      font-size: 0.95rem;
+      right: 0.8rem;
   }
 
-  /* CLASIFICADO */
   .post-card {
-    flex: 1 1 100%;
-    margin-bottom: 1.5rem;
+      flex: 1 1 100%;
+      margin-bottom: 1.5rem;
   }
-  
+
   .d-flex.gap-4.flex-wrap {
-    flex-direction: column;
-    gap: 1rem !important;
+      flex-direction: column;
+      gap: 1rem !important;
   }
-  
+
   .carousel-control-prev,
   .carousel-control-next {
-    top: auto;
-    transform: none;
+      top: auto;
+      transform: none;
   }
-  
+
   .carousel-control-prev {
-    left: calc(50% - 50px);
+      left: calc(50% - 50px);
   }
-  
+
   .carousel-control-next {
-    right: calc(50% - 50px);
+      right: calc(50% - 50px);
   }
-  
+
   .post-image {
-    height: 180px !important;
+      height: 180px !important;
   }
-  
+
   h3 {
-    font-size: 18px;
+      font-size: 18px;
   }
-  
+
   .post-meta {
-    font-size: 12px;
+      font-size: 12px;
   }
-  
+
   .btn-info {
-    padding: 0.25rem 0.75rem;
-    font-size: 0.875rem;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.875rem;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width:576px) {
   .benefits-card-container {
-    width: 100%;
+      width: 100%;
   }
 
   .benefits-icon-login {
-    width: 38px;
-    height: 38px;
-    font-size: 24px;
+      width: 38px;
+      height: 38px;
+      font-size: 24px;
   }
 
   .benefits-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 24px;
+      width: 38px;
+      height: 38px;
+      font-size: 24px;
   }
 
   .benefits-item {
-    width: 4rem;
-    min-width: auto;
+      width: 4rem;
+      min-width: auto;
   }
 
-  /* COLLAGE */
   .collage-img {
-    flex: 0 0 calc(33.333% - 10px);
-    height: 130px;
+      flex: 0 0 calc(33.333% - 10px);
+      height: 130px;
   }
 
   .incl-left {
-    transform: rotate(-3deg);
-    transition: transform 0.3s ease;
+      transform: rotate(-3deg);
+      transition: transform 0.3s ease;
   }
 
   .incl-right {
-    transform: rotate(3deg);
-    transition: transform 0.3s ease;
+      transform: rotate(3deg);
+      transition: transform 0.3s ease;
   }
 
   .incl-left:hover,
   .incl-right:hover {
-    transform: scale(1.5);
+      transform: scale(1.5);
   }
 
-  /* SERVICIOS */
   .section-title {
-    font-size: 2rem;
-    text-align: center;
+      font-size: 2rem;
+      text-align: center;
   }
 
   .btn-slider {
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.9rem;
+      width: 2rem;
+      height: 2rem;
+      font-size: 0.9rem;
   }
 
   .services-track {
-    gap: 0.75rem;
+      gap: 0.75rem;
   }
 
   .service-card {
-    min-width: 17.5rem;
-    min-height: 25rem;
-    padding: 1.25rem;
-    border-radius: 1.875rem;
+      min-width: 17.5rem;
+      min-height: 25rem;
+      padding: 1.25rem;
+      border-radius: 1.875rem;
   }
 
   .service-card h3 {
-    font-size: 1.4rem;
+      font-size: 1.4rem;
   }
 
   .service-card p {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
-  /* FAQ */
   .faq-title {
-    font-size: 2rem;
-    text-align: center;
+      font-size: 2rem;
+      text-align: center;
   }
 
   .contact-prompt p {
-    font-size: 1rem;
+      font-size: 1rem;
   }
 
   .btn-contact {
-    padding: 0.625rem 1.875rem;
-    font-size: 1rem;
+      padding: 0.625rem 1.875rem;
+      font-size: 1rem;
   }
 
   .accordion-button {
-    font-size: 1.1rem;
-    padding-right: 1.5rem !important;
+      font-size: 1.1rem;
+      padding-right: 1.5rem !important;
   }
 
   .accordion-body {
-    font-size: 0.95rem;
+      font-size: 0.95rem;
   }
 
   .accordion-button .bi {
-    font-size: 0.9rem;
-    right: 0.6rem;
+      font-size: 0.9rem;
+      right: 0.6rem;
   }
 }

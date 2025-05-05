@@ -68,6 +68,7 @@ small {
   display: flex;
   gap: 10px;
   margin: 15px 20px 0;
+  flex-wrap: wrap;
 }
 
 button,
@@ -104,4 +105,25 @@ button:hover {
 
 .btn-editar:hover {
   background-color: var(--color-secundario);
+}
+
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .post-image {
+    height: 180px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  button, a {
+    width: 100%;
+    text-align: center;
+  }
 }

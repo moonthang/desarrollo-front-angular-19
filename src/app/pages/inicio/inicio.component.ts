@@ -68,7 +68,7 @@ export class InicioComponent implements OnInit {
 
   preguntasFrecuentes = [
     {
-      pregunta: '¿Pruedo ser asociado si no soy docente?',
+      pregunta: '¿Puedo ser asociado si no soy docente?',
       respuesta: 'Si es personal administrativo activo en el sector educativo oficial o familiar de primer grado de un asociado.'
     },
     {
