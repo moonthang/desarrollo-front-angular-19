@@ -3,19 +3,16 @@
     <h5>Menú</h5>
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a [routerLink]="['/', role, '']" class="nav-link">Clasificados</a>
+        <a [routerLink]="['/', role, '']" class="nav-link">Certificados</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/', role, '']" class="nav-link">Publicar clasificado</a>
+        <a [routerLink]="['/', role, '']" class="nav-link">Solicitar crédito</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/', role, 'get-pqrsdf']" class="nav-link">PQRSDF</a>
+        <a [routerLink]="['/', role, '']" class="nav-link">Actualizar datos</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/', role, 'get-pqrsdf']" class="nav-link">Correos</a>
-      </li>
-      <li class="nav-item">
-        <a [routerLink]="['/', role, 'get-pregunta-f']" class="nav-link">Mensajes contacto</a>
+        <a href="https://campus.coonadoc.co/login/index.php" target="_blank" rel="noopener noreferrer" class="nav-link">Campus</a>
       </li>
       <li class="nav-item cerrar">
         <a routerLink="/inicio" (click)="logout()" class="nav-link">Cerrar Sesión</a>
