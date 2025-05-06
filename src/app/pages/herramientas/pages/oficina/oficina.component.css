@@ -1,0 +1,49 @@
+.banner {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-content {
+    width: 100%;
+}
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-content input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+    /* Very light gray */
+    border-radius: 10px;
+}
+
+.form-content button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FDD835;
+    color: black;
+}
