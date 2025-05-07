@@ -1,0 +1,17 @@
+:root{
+    --color-principal:#228B22;
+    --color-principal-claro: #22CC23;
+    --color-secundario: #Ff5400;
+    --color-secundario-claro: #FFA420;
+
+    --bs-color-principal: var(--color-principal);
+    --bs-color-principal-claro: var(--color-principal-claro);
+    --bs-color-secundario: var(--color-secundario);
+    --bs-color-secundario-claro: var(--color-secundario-claro;);
+
+    --color-claro: #fdfde1;
+    --color-oscuro: #0c0c0c;
+
+    --bs-color-claro: var(--color-claro);
+    --bs-color-oscuro: var(--color-oscuro);
+}

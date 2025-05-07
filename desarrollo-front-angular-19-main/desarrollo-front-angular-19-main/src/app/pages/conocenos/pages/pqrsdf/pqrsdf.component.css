@@ -1,0 +1,85 @@
+/* ==================== */
+/*    SOBRE NOSOTROS    */
+/* ==================== */
+.pqrsdf-section-section {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.pqrsdf-section-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pqrsdf-section-title {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .pqrsdf-section {
+    position: relative;
+    padding-top: 0 !important;
+  }
+}
+
+.container {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(550px 550px at 50% 30%, hsl(120.35, 71%, 47%) 0, transparent 70%),
+    radial-gradient(520px 520px at 70% 50%, hsl(35.52, 100%, 56%) 0, transparent 65%);
+  background-repeat: no-repeat;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  background-color: #eaecee;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+form .form-label {
+  font-weight: 600;
+}
+
+form .form-control,
+form .form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 0.2rem rgba(93, 241, 79, 0.25);
+}
+
+.row .col-md-6 {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+button[type='submit'] {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  background-color: var(--color-principal-claro);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button[type='submit']:hover {
+  background-color: var(--color-principal-claro);
+}
+
+button[type='submit']:disabled {
+  background-color: var(--color-principal);
+  cursor: not-allowed;
+}
