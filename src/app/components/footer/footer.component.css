@@ -24,9 +24,7 @@ footer .btn {
 }
 
 .list-unstyled {
-  font-family: poppins;
   font-weight: bold;
-  color: black;
 }
 
 .list-unstyled a {
@@ -51,7 +49,7 @@ footer .btn {
 
 .social-icons .bi {
   font-size: 1.5rem;
-  color: #000000;
+  color: #212529;
   background-color: #ffffff;
   padding: 8px;
   border-radius: 50%;

@@ -1,0 +1,166 @@
+.container {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--color-oscuro);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos para vista de escritorio */
+.desktop-view {
+    display: block;
+}
+
+.pqrsdf-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 0.9rem;
+    background: white;
+}
+
+.pqrsdf-table thead {
+    background-color: var(--color-principal);
+    color: white;
+}
+
+.pqrsdf-table th {
+    padding: 0.8rem;
+    text-align: left;
+    font-weight: 500;
+}
+
+.pqrsdf-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+.pqrsdf-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.pqrsdf-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.pqrsdf-table td {
+    padding: 0.8rem;
+    color: #555;
+}
+
+/* Estilos para vista móvil */
+.mobile-view {
+    display: none;
+}
+
+.subscriber-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card-row {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.card-label {
+    font-weight: 500;
+    color: var(--color-principal);
+    min-width: 120px;
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.card-value {
+    flex: 1;
+    word-break: break-word;
+    color: #555;
+}
+
+/* Estados y mensajes */
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #95a5a6;
+    font-style: italic;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.status-control {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--color-principal);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .pqrsdf-table th,
+    .pqrsdf-table td {
+        padding: 0.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .desktop-view {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+    }
+
+    .subscriber-card {
+        padding: 0.9rem;
+    }
+
+    .card-label {
+        min-width: 100px;
+        font-size: 0.82rem;
+    }
+
+    .card-value {
+        font-size: 0.82rem;
+    }
+
+    .status-control {
+        margin-top: 0.3rem;
+        padding-top: 0.5rem;
+        border-top: 1px dashed #eee;
+    }
+}
