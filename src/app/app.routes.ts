@@ -65,7 +65,11 @@ export const routes: Routes = [
         path: 'get-credito-f',
         loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
       },
-      { 
+      {
+        path: 'get-correo-f',
+        loadComponent: () => import('./components/footer/get-correo-f/get-correo-f.component').then(m => m.GetCorreosComponent)  
+      },
+      {
         path: 'publish-clasificado',
         loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent) 
       },
@@ -95,6 +99,10 @@ export const routes: Routes = [
       { 
         path: 'get-credito-f',
         loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
+      },
+      {
+        path: 'get-correo-f',
+        loadComponent: () => import('./components/footer/get-correo-f/get-correo-f.component').then(m => m.GetCorreosComponent)  
       },
       { 
         path: 'publish-clasificado',

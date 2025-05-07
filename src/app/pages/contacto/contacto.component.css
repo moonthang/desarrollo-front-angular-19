@@ -92,10 +92,23 @@
 .pregunta-section {
   background-color: #f1f1f1;
   padding: 4rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 0 !important;
+}
+
+.credit-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.credit-shape img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
 }
 
 .pregunta h2 {

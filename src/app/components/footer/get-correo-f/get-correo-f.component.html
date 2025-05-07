@@ -1,0 +1,56 @@
+<div class="container">
+    <h2>Suscriptores</h2>
+    <div class="desktop-view">
+        <table class="pqrsdf-table">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Correo Electrónico</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of correoFList; track item.id) {
+                <tr>
+                    <td>{{ item.fechaCreacion | date:'mediumDate' }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>
+                        <div class="status-control">
+                            @if (loadingStates[item.id]) {
+                            <div class="spinner"></div>
+                            }
+                        </div>
+                    </td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="3" class="no-data">No hay suscriptores registrados</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="mobile-view">
+        @for (item of correoFList; track item.id) {
+        <div class="message-card">
+            <div class="card-row">
+                <span class="card-label">Fecha:</span>
+                <span class="card-value">{{ item.fechaCreacion | date:'mediumDate' }}</span>
+            </div>
+            <div class="card-row">
+                <span class="card-label">Correo:</span>
+                <span class="card-value">{{ item.email }}</span>
+            </div>
+            <div class="card-row status-row">
+                <div class="status-control">
+                    @if (loadingStates[item.id]) {
+                    <div class="spinner"></div>
+                    }
+                </div>
+            </div>
+        </div>
+        } @empty {
+        <div class="no-data">No hay suscriptores registrados</div>
+        }
+    </div>
+</div>

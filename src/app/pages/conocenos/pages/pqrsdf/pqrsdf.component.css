@@ -1,28 +1,38 @@
 /* ==================== */
 /*    SOBRE NOSOTROS    */
 /* ==================== */
-.pqrsdf-section-section {
-  position: relative;
+.pqrsdf-section {
   margin-bottom: 3rem;
 }
 
-.pqrsdf-section-img {
+.pqrsdf-img {
   width: 100%;
-  height: 450px;
+  height: 15.625rem;
   object-fit: cover;
   object-position: center;
 }
 
-.pqrsdf-section-title {
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-  font-size: 3.5rem;
-  text-align: center;
+.pqrsdf-title {
+  text-shadow: 0.125rem 0.125rem 0.375rem rgba(0, 0, 0, 0.6);
+  font-size: 3.3rem;
 }
 
 @media (max-width: 576px) {
   .pqrsdf-section {
     position: relative;
     padding-top: 0 !important;
+  }
+
+  .pqrsdf-title {
+    text-shadow: 0.125rem 0.125rem 0.375rem rgba(0, 0, 0, 0.6);
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .pqrsdf-title {
+    text-shadow: 0.125rem 0.125rem 0.375rem rgba(0, 0, 0, 0.6);
+    font-size: 3rem;
   }
 }
 
