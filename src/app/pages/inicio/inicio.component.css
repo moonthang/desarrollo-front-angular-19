@@ -675,7 +675,7 @@ small {
   }
 
   .section-subtitle-ass {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
   }
 
   .section-subtitle-ass::after {
@@ -690,7 +690,7 @@ small {
 
   .reasons-text,
   .organization-badge {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
   }
 
   .benefits-img,

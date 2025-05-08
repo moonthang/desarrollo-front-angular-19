@@ -1,0 +1,29 @@
+.btn-more {
+    color: var(--color-principal);
+    border: 0.125rem solid var(--color-principal);
+    padding: 0.62rem 1.2rem;
+    border-radius: 3rem;
+    transition: all 0.3s ease;
+}
+
+.btn-more i {
+    font-size: 1.7rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-more:hover i {
+    transform: scale(1.9);
+}
+
+.btn-more:hover {
+    background-color: var(--color-principal);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .col-md-6.order-md-1 {
+        margin-bottom: 20px;
+    }
+}
