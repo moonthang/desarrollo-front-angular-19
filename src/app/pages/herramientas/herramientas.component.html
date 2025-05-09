@@ -4,38 +4,66 @@
     </h1>
 </section>
 
-<div class="container text-center py-5">
-    <p class="subtitle">Descubre nuestras herramientas digitales</p>
-    <p>Accede a la app, la oficina virtual y el campus</p>
-</div>
-
-<section class="sections">
-    <div class="section">
-        <div class="section-content">
-            <h2>App</h2>
-            <p>
-                Descarga nuestra app y ten todos nuestros servicios al alcance de tu mano.
-            </p>
-            <button class="btn-primary text-white" routerLink="/herramientas/app">Ir a la App</button>
-        </div>
+<section class="descubre-section">
+    <div class="container text-center">
+        <p class="subtitle text-muted mb-2">Descubre nuestras herramientas digitales</p>
+        <h2 class="display-5 fw-normal">Accede a la app, la oficina virtual y el campus</h2>
     </div>
+</section>
 
-    <div class="section">
-        <div class="section-content">
-            <h2>Oficina Virtual</h2>
-            <p>
-                Gestiona tus servicios de forma segura y cómoda.
-                Consulta extractos y mucho más.
-            </p>
-            <button class="btn-primary text-white" routerLink="/herramientas/oficina">Ir a la Oficina Virtual</button>
-        </div>
-    </div>
+<section class="opciones-main py-5 bg-light">
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle mb-4">
+                            <i class="bi bi-phone fs-3 text-primary"></i>
+                        </div>
+                        <h3 class="h4 mb-3">App</h3>
+                        <p class="text-muted flex-grow-1">
+                            Descarga nuestra app y ten todos nuestros servicios al alcance de tu mano.
+                        </p>
+                        <a class="btn btn-primary mt-auto align-self-center" routerLink="/herramientas/app">
+                            Ir a la App <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="section">
-        <div class="section-content">
-            <h2>Campus</h2>
-            <p>Curso inducción asociados.</p>
-            <button class="btn-primary text-white" routerLink="/herramientas/campus">Ir al Campus</button>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle mb-4">
+                            <i class="bi bi-laptop fs-3 text-primary"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Oficina Virtual</h3>
+                        <p class="text-muted flex-grow-1">
+                            Gestiona tus servicios de forma segura y cómoda. Consulta extractos y mucho más.
+                        </p>
+                        <a class="btn btn-primary mt-auto align-self-center" routerLink="/herramientas/oficina">
+                            Ir a la Oficina <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm rounded-3 overflow-hidden">
+                    <div class="card-body p-4 d-flex flex-column">
+                        <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle mb-4">
+                            <i class="bi bi-mortarboard fs-3 text-primary"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Campus</h3>
+                        <p class="text-muted flex-grow-1">
+                            Curso inducción asociados. Capacítate con nuestros programas educativos.
+                        </p>
+                        <a class="btn btn-primary mt-auto align-self-center" routerLink="/herramientas/campus">
+                            Ir al Campus <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
