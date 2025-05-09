@@ -73,7 +73,7 @@
     font-weight: 500;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .herra-title {
         font-size: 3.5rem;
     }
