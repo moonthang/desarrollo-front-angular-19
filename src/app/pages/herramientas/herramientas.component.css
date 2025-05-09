@@ -1,7 +1,3 @@
-.herra-section {
-    margin-bottom: 3rem;
-}
-
 .herra-img {
     width: 100%;
     height: 15.625rem;
@@ -20,26 +16,6 @@
     margin-bottom: 1rem;
 }
 
-.sections {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 15px;
-    margin-bottom: 2rem;
-}
-
-.section-content {
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 .btn-primary {
     background-color: var(--color-secundario);
@@ -59,11 +35,49 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+.descubre-section {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.opciones-main {
+    background-color: #fff;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.icon-wrapper i {
+    margin: 0;
+    line-height: 1;
+    color: var(--color-principal) !important;
+}
+
+.btn-primary {
+    padding: 0.5rem 1.25rem;
+    font-weight: 500;
+}
+
 @media (min-width: 576px) {
     .herra-title {
         font-size: 3.5rem;
     }
-    
+
     .sections {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -73,14 +87,22 @@
     .herra-title {
         font-size: 4rem;
     }
-    
+
     .sections {
         grid-template-columns: repeat(3, 1fr);
         padding: 0 30px;
     }
-    
+
     .section-content {
         padding: 25px;
+    }
+
+    .descubre-section {
+        padding: 3rem 0;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -88,19 +110,9 @@
     .herra-title {
         font-size: 5rem;
     }
-    
+
     .sections {
         max-width: 1200px;
         margin: 0 auto 3rem;
-    }
-}
-
-@media (max-width: 400px) {
-    .herra-title {
-        font-size: 2rem;
-    }
-    
-    .subtitle {
-        font-size: 1.2rem;
     }
 }

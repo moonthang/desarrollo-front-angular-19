@@ -26,7 +26,15 @@ export class HeaderComponent implements OnDestroy {
   toggleMenu() {
     this.mobileMenuVisible = !this.mobileMenuVisible;
     document.body.style.overflow = this.mobileMenuVisible ? 'hidden' : '';
+
+    if (!this.mobileMenuVisible) {
+      const currentUserMenuState = this.submenusVisible['/user'] || false;
+      this.submenusVisible = { '/user': currentUserMenuState };
+    } else {
+      this.setActiveSubmenus();
+    }
   }
+
 
   @HostListener('document:click', ['$event'])
   onClick(event: MouseEvent) {
@@ -44,8 +52,12 @@ export class HeaderComponent implements OnDestroy {
   }
 
   toggleSubmenu(menu: string): void {
-    this.submenusVisible[menu] = !this.submenusVisible[menu];
+    Object.keys(this.submenusVisible).forEach(key => {
+      this.submenusVisible[key] = false;
+    });
+    this.submenusVisible[menu] = true;
   }
+
 
   logout() {
     this.authService.logout();
@@ -64,5 +76,22 @@ export class HeaderComponent implements OnDestroy {
 
   ngOnDestroy() {
     this.authSubscription.unsubscribe();
+  }
+
+  setActiveSubmenus() {
+    const currentUrl = this.router.url;
+
+    const currentUserMenuState = this.submenusVisible['/user'] || false;
+    this.submenusVisible = { '/user': currentUserMenuState };
+
+    if (currentUrl.startsWith('/conocenos')) {
+      this.submenusVisible['/conocenos'] = true;
+    }
+    if (currentUrl.startsWith('/servicios')) {
+      this.submenusVisible['/servicios'] = true;
+    }
+    if (currentUrl.startsWith('/herramientas')) {
+      this.submenusVisible['/herramientas'] = true;
+    }
   }
 }

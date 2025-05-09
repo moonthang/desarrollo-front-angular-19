@@ -4,58 +4,147 @@
     </h1>
 </section>
 
-<section class="about-section py-5">
-    <div class="container">
-        <div class="row">
+<section class="asi-section pb-5">
+    <div class="container pt-5">
+        <div class="row align-items-center gap-5">
+            <div class="col-md-6 order-md-2">
+                <div class="d-flex align-items-center flex-wrap">
+                    <span class="reasons-text me-2">Así es nuestro crédito de </span>
+                    <span class="organization-badge"> Recreación y Turismo</span>
+                </div>
+                <p class="pt-4 fs-5">En Coonadoc, hacemos posible que disfrutes experiencias únicas y momentos
+                    inolvidables con tu familia. Nuestro crédito de recreación y turismo te ofrece tasas fijas, plazos
+                    flexibles y total transparencia, sin cargos ocultos, para que vivas nuevas aventuras sin
+                    preocupaciones.</p>
+            </div>
+            <div class="col-md-5">
+                <div class="img-container overflow-hidden">
+                    <img src="assets/img/rec/turismo-1.png" class="img-fluid w-100 h-auto">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="assets/img/turismo-ecuador.png" class="card-img-top p-4" alt="Campus Virtual">
-                    <div class="card-body">
-                        <h5 class="card-title">Paquetes Turísticos Nacionales e Internacionales</h5>
-                        <p class="card-text text-secondary">
-                            Coonadoc organiza viajes a diversos destinos, tanto dentro de Colombia como en el
-                            extranjero. Estos paquetes están
-                            diseñados para ofrecer experiencias culturales, recreativas y de esparcimiento, adaptadas a
-                            las preferencias de los asociados.
-                            Algunos destinos promocionados incluyen Europa, México, Estados Unidos, Rusia, Turquía,
-                            Egipto e Israel.
-                        </p>
-                        <a href="pagina.html" class="btn btn-success mt-3">Mas información</a>
+<section class="tipos-section py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-12 mb-5">
+                <div class="card rounded-4 border-0">
+                    <div class="row g-0">
+                        <div class="col-md-6 order-md-1">
+                            <img src="assets/img/rec/educativo-1.jpg" class="img-fluid-1 rounded-4">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column order-md-2">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold display-6 mb-2">Crédito de recreación y turismo</h5>
+                                <p class="card-text fs-5 flex-grow-1">Destinado para viajes nacionales e internacionales
+                                    promovidos por Coonadoc de forma directa o través de sus convenios..</p>
+                                <div class="mt-3">
+                                    <ul class="list-group fs-5">
+                                        <li>Apalancamiento: hasta 10 veces los aportes.</li>
+                                        <li>Plazo máximo: 48 meses por ventanilla y 60 meses por nomina.</li>
+                                        <li>Amortización: cuota mensual fija.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="assets/img/convenios/expoturismo.jpg" class="card-img-top p-4" alt="Otro Servicio">
-                    <div class="card-body">
-                        <h5 class="card-title">Convenios con Agencias de Viajes</h5>
-                        <p class="card-text text-secondary">
-                            La cooperativa establece alianzas con agencias de viajes reconocidas, como Expoturismo
-                            Representaciones,
-                            para ofrecer a sus asociados tarifas preferenciales y servicios personalizados en la
-                            planificación de sus
-                            viajes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center shadow-sm">
-                    <img src="assets/img/convenios/panela-tours.jpg" class="card-img-top p-4" alt="Tercer Servicio">
-                    <div class="card-body">
-                        <h5 class="card-title">Eventos y Actividades Culturales</h5>
-                        <p class="card-text text-secondary">
-                            la cooperativa promueve la participación en eventos culturales y festivales,
-                            como el Festival de las Luces en Villa de Leyva, brindando a los asociados la oportunidad de
-                            disfrutar
-                            de experiencias enriquecedoras y fortalecer los lazos comunitarios.
-                        </p>
+            <div class="col-12 mb-5">
+                <div class="card rounded-4 border-0">
+                    <div class="row">
+                        <div class="col-md-6 order-md-2">
+                            <img src="https://dynamic-media.tacdn.com/media/photo-o/2f/0b/ae/5f/caption.jpg?w=800&h=600&s=1"
+                                class="img-fluid rounded-4" alt="Convenio Smart">
+                        </div>
+                        <div class="col-md-6 d-flex flex-column order-md-1">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="fw-bold display-6 mb-2">Convenio Panela Tours y Rutas Colombianas</h5>
+                                <p class="card-text fs-5 flex-grow-1">Gracias a nuestros convenios con Panela Tours y
+                                    Rutas Colombia podras disfrutar de planes turisticos terrestres todo incluido,
+                                    planes de viaje Semana Santa, excursiones terrestres, planes de viajes aereos,
+                                    Santander San Gil, y muchos más.</p>
+                                <div class="mt-3">
+                                    <ul class="list-group fs-5">
+                                        <li>Descuento especial.</li>
+                                        <li>Tours con todo incluido.</li>
+                                        <li>Distintos planes, elije el que se adapte a ti.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a [routerLink]="['/servicios/convenios']"
+                                    class="btn-convenios mt-3 align-self-start text-white rounded-4">
+                                    Ver Convenios
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section class="credit-form-section mt-5 py-5">
+    <div class="credit-shape">
+        <img src="assets/img/shapes/shape-20.png" alt="Decoración" class="img-fluid">
+    </div>
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="reasons-text mx-2 text-white">Solicita tu </span>
+            <span class="organization-badge">Crédito</span>
+        </div>
+        <form [formGroup]="creditoForm" (ngSubmit)="onSubmit()" class="p-4 shadow rounded bg-white">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nombre y Apellidos*</label>
+                    <input type="text" formControlName="nombreCompleto" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Teléfono*</label>
+                    <input type="tel" formControlName="telefono" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Correo Electrónico*</label>
+                    <input type="email" formControlName="correo" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tipo de Crédito*</label>
+                    <select formControlName="tipoCredito" class="form-select">
+                        <option disabled selected value="">Seleccione una opción</option>
+                        @for (tipo of tiposCreditosForm; track tipo) {
+                        <option [value]="tipo">{{ tipo }}</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Profesión*</label>
+                    <select formControlName="profesion" class="form-select">
+                        <option disabled selected value="">Seleccione una opción</option>
+                        @for (p of profesiones; track p) {
+                        <option [value]="p">{{ p }}</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary" [disabled]="creditoForm.invalid || isSubmitting">
+                    @if (isSubmitting) {
+                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> Enviando...
+                    } @else {
+                    Enviar Solicitud
+                    }
+                </button>
+            </div>
+        </form>
+        @if (submitSuccess) {
+        <div class="alert alert-success mt-4">Tu solicitud fue enviada correctamente.</div>
+        }
+        @if (errorMessage) {
+        <div class="alert alert-danger mt-4">{{ errorMessage }}</div>
+        }
     </div>
 </section>
