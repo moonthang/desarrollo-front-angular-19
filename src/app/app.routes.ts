@@ -34,9 +34,9 @@ export const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'herramientas', component: HerramientasComponent },
-  { path: 'herramientas/app', component: AppComponent},
-  { path: 'herramientas/campus', component: CampusComponent},
-  { path: 'herramientas/oficina', component: OficinaComponent},
+  { path: 'herramientas/app', component: AppComponent },
+  { path: 'herramientas/campus', component: CampusComponent },
+  { path: 'herramientas/oficina', component: OficinaComponent },
   { path: 'pagos', component: PagosComponent },
   { path: 'pqrsdf', component: PqrsdfComponent },
   { path: 'servicios', component: ServiciosComponent },
@@ -53,33 +53,33 @@ export const routes: Routes = [
     path: 'dash-admin',
     loadComponent: () => import('./pages/dashboard/dash-admin/dash-admin.component').then(m => m.DashAdminComponent),
     children: [
-      { 
-        path: 'get-pqrsdf', 
-        loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent) 
+      {
+        path: 'get-pqrsdf',
+        loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent)
       },
-      { 
+      {
         path: 'get-pregunta-f',
-        loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent) 
+        loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent)
       },
-      { 
+      {
         path: 'get-credito-f',
-        loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
+        loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent)
       },
       {
         path: 'get-correo-f',
-        loadComponent: () => import('./components/footer/get-correo-f/get-correo-f.component').then(m => m.GetCorreosComponent)  
+        loadComponent: () => import('./components/footer/get-correo-f/get-correo-f.component').then(m => m.GetCorreosComponent)
       },
       {
         path: 'publish-clasificado',
-        loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent) 
+        loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent)
       },
-      { 
+      {
         path: 'manage-clasificado',
-        loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent) 
+        loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent)
       },
-      { 
+      {
         path: 'edit-clasificado/:id',
-        loadComponent: () => import('./pages/servicios/pages/clasificados/edit-clasificado/edit-clasificado.component').then(m => m.EditClasificadoComponent) 
+        loadComponent: () => import('./pages/servicios/pages/clasificados/edit-clasificado/edit-clasificado.component').then(m => m.EditClasificadoComponent)
       },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]
@@ -88,42 +88,52 @@ export const routes: Routes = [
     path: 'dash-editor',
     loadComponent: () => import('./pages/dashboard/dash-editor/dash-editor.component').then(m => m.DashEditorComponent),
     children: [
-      { 
-        path: 'get-pqrsdf', 
-        loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent) 
+      {
+        path: 'get-pqrsdf',
+        loadComponent: () => import('./pages/conocenos/pages/pqrsdf/get-pqrsdf/get-pqrsdf.component').then(m => m.GetPqrsdfComponent)
       },
-      { 
+      {
         path: 'get-pregunta-f',
-        loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent) 
+        loadComponent: () => import('./pages/contacto/get-pregunta-f/get-pregunta-f.component').then(m => m.GetPreguntaFComponent)
       },
-      { 
+      {
         path: 'get-credito-f',
-        loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent) 
+        loadComponent: () => import('./pages/servicios/get-credito-f/get-credito-f.component').then(m => m.GetCreditoFComponent)
       },
       {
         path: 'get-correo-f',
-        loadComponent: () => import('./components/footer/get-correo-f/get-correo-f.component').then(m => m.GetCorreosComponent)  
+        loadComponent: () => import('./components/footer/get-correo-f/get-correo-f.component').then(m => m.GetCorreosComponent)
       },
-      { 
+      {
         path: 'publish-clasificado',
-        loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent) 
+        loadComponent: () => import('./pages/servicios/pages/clasificados/publish-clasificado/publish-clasificado.component').then(m => m.PublishClasificadoComponent)
       },
-      { 
+      {
         path: 'manage-clasificado',
-        loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent) 
+        loadComponent: () => import('./pages/servicios/pages/clasificados/manage-clasificado/manage-clasificado.component').then(m => m.ManageClasificadoComponent)
       },
-      { 
+      {
         path: 'edit-clasificado/:id',
-        loadComponent: () => import('./pages/servicios/pages/clasificados/edit-clasificado/edit-clasificado.component').then(m => m.EditClasificadoComponent) 
+        loadComponent: () => import('./pages/servicios/pages/clasificados/edit-clasificado/edit-clasificado.component').then(m => m.EditClasificadoComponent)
       },
       { path: '', redirectTo: 'get-pqrsdf', pathMatch: 'full' }
     ]
   },
   {
     path: 'dash-usuario',
-    loadComponent: () => import('./pages/dashboard/dash-usuario/dash-usuario.component').then(m => m.DashUsuarioComponent)
+    loadComponent: () => import('./pages/dashboard/dash-usuario/dash-usuario.component').then(m => m.DashUsuarioComponent),
+    children: [
+      {
+        path: 'politicas',
+        loadComponent: () => import('./pages/conocenos/pages/politicas/politicas.component').then(m => m.PoliticasComponent)
+      },
+      {
+        path: 'form-credito',
+        loadComponent: () => import('./components/forms/forms-credito/forms-credito.component').then(m => m.FormsCreditoComponent)
+      },
+      { path: '', redirectTo: 'form-credito', pathMatch: 'full' }
+    ]
   },
-  
 
   { path: '', redirectTo: 'inicio', pathMatch: 'full' },
   { path: '**', redirectTo: 'inicio' }

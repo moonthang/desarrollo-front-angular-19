@@ -157,6 +157,69 @@
     right: 15%;
 }
 
+@media (max-width: 576px) {
+    .container {
+        padding: 0 1rem !important;
+        margin: 0 auto !important;
+    }
+
+    .col-md-6 {
+        text-align: center;
+    }
+
+    .list-group {
+        text-align: left;
+    }
+
+    .benefits-container {
+        padding: 1rem;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .benefit-img img {
+        height: 18rem;
+    }
+
+    .benefits-shape {
+        display: none;
+    }
+
+    .benefit-card-container {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .benefit-card {
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-left: 0.125rem solid var(--color-principal);
+        background-color: #f8f9fa !important;
+    }
+
+    .benefit-card:hover,
+    .hover-effect:hover {
+        background-color: #f8f9fa !important;
+        color: inherit !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .benefit-card:active {
+        background-color: #e9ecef !important;
+    }
+
+    .benefit-1,
+    .benefit-2,
+    .benefit-3,
+    .benefit-4,
+    .benefit-5,
+    .benefit-6 {
+        position: static;
+        transform: none !important;
+    }
+}
+
 @media (max-width: 990px) {
     .benefits-container {
         min-height: auto;
@@ -184,67 +247,6 @@
 
     .benefit-image {
         margin: 2rem 0;
-    }
-}
-
-@media (max-width: 576px) {
-    .container {
-        padding: 0 1rem !important;
-        margin: 0 auto !important;
-    }
-
-    .col-md-6 {
-        text-align: center;
-    }
-
-    .list-group {
-        text-align: left;
-    }
-
-    .benefits-container {
-        padding: 1rem;
-    }
-
-    .benefit-img img {
-        height: 15rem;
-    }
-
-    .benefits-shape {
-        display: none;
-    }
-
-    .benefit-card {
-        width: 90%;
-        max-width: none;
-        padding: 1rem;
-        margin: 0.5rem 0;
-        border-left: 0.125rem solid var(--color-principal);
-        background-color: #f8f9fa !important;
-        color: inherit !important;
-        transform: none !important;
-        box-shadow: none !important;
-    }
-
-    .benefit-card:hover,
-    .hover-effect:hover {
-        background-color: #f8f9fa !important;
-        color: inherit !important;
-        transform: none !important;
-        box-shadow: none !important;
-    }
-
-    .benefit-card:active {
-        background-color: #e9ecef !important;
-    }
-
-    .benefit-1,
-    .benefit-2,
-    .benefit-3,
-    .benefit-4,
-    .benefit-5,
-    .benefit-6 {
-        position: static;
-        transform: none !important;
     }
 }
 

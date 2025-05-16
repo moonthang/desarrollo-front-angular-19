@@ -60,6 +60,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    background-color: #f2faf4;
 }
 
 .icon-wrapper i {

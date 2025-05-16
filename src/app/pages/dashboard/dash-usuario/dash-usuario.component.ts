@@ -9,7 +9,7 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './dash-usuario.component.css'
 })
 export class DashUsuarioComponent {
-  role = 'dash-editor';
+  role = 'dash-usuario';
 
   constructor(private authService: AuthService, private router: Router) {}
 

@@ -1,0 +1,60 @@
+<section class="credit-form-section mt-5 py-5">
+    <div class="credit-shape">
+        <img src="assets/img/shapes/shape-20.png" alt="Decoración" class="img-fluid">
+    </div>
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="reasons-text mx-2 text-white">Solicita tu </span>
+            <span class="organization-badge">Crédito</span>
+        </div>
+        <form [formGroup]="creditoForm" (ngSubmit)="onSubmit()" class="p-4 shadow rounded bg-white">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nombre y Apellidos*</label>
+                    <input type="text" formControlName="nombreCompleto" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Teléfono*</label>
+                    <input type="tel" formControlName="telefono" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Correo Electrónico*</label>
+                    <input type="email" formControlName="correo" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tipo de Crédito*</label>
+                    <select formControlName="tipoCredito" class="form-select">
+                        <option disabled selected value="">Seleccione una opción</option>
+                        @for (tipo of tiposCreditosForm; track tipo) {
+                        <option [value]="tipo">{{ tipo }}</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Profesión*</label>
+                    <select formControlName="profesion" class="form-select">
+                        <option disabled selected value="">Seleccione una opción</option>
+                        @for (p of profesiones; track p) {
+                        <option [value]="p">{{ p }}</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary" [disabled]="creditoForm.invalid || isSubmitting">
+                    @if (isSubmitting) {
+                    <span class="spinner-border spinner-border-sm" aria-hidden="true"></span> Enviando...
+                    } @else {
+                    Enviar Solicitud
+                    }
+                </button>
+            </div>
+        </form>
+        @if (submitSuccess) {
+        <div class="alert alert-success mt-4">Tu solicitud fue enviada correctamente.</div>
+        }
+        @if (errorMessage) {
+        <div class="alert alert-danger mt-4">{{ errorMessage }}</div>
+        }
+    </div>
+</section>

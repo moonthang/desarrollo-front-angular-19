@@ -3,19 +3,20 @@
     <h5>Menú</h5>
     <ul class="nav flex-column">
       <li class="nav-item">
-        <a [routerLink]="['/', role, '']" class="nav-link">Certificados</a>
+        <a [routerLink]="['/', role, '']" routerLinkActive="active" class="nav-link">Certificados</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/', role, '/conocenos/politicas']" class="nav-link">Formularios</a>
+        <a [routerLink]="['/', role, 'politicas']" routerLinkActive="active" class="nav-link">Formularios</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/', role, '']" class="nav-link">Solicitar crédito</a>
+        <a [routerLink]="['/', role, 'form-credito']" routerLinkActive="active" class="nav-link">Solicitar crédito</a>
       </li>
       <li class="nav-item">
-        <a [routerLink]="['/', role, '']" class="nav-link">Actualizar datos</a>
+        <a [routerLink]="['/', role, '']" routerLinkActive="active" class="nav-link">Actualizar datos</a>
       </li>
       <li class="nav-item">
-        <a href="https://campus.coonadoc.co/login/index.php" target="_blank" rel="noopener noreferrer" class="nav-link">Campus</a>
+        <a href="https://campus.coonadoc.co/login/index.php" target="_blank" rel="noopener noreferrer"
+          class="nav-link">Campus</a>
       </li>
       <li class="nav-item cerrar">
         <a routerLink="/inicio" (click)="logout()" class="nav-link">Cerrar Sesión</a>
