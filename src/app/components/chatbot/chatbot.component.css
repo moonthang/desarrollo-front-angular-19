@@ -1,8 +1,9 @@
 .chatbot-container {
     position: fixed;
     bottom: 90px;
-    right: 20px;
+    right: max(20px, env(safe-area-inset-right));
     z-index: 50;
+    width: auto; 
 
     .chatbot-button {
         background: var(--color-principal-claro);
@@ -242,5 +243,12 @@
     50% {
         opacity: 1;
         transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 576px) {
+    .chat-window {
+        width: 300px !important;
+        height: 500px;
     }
 }
