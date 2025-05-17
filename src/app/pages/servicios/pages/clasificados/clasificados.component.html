@@ -1,6 +1,7 @@
 <section class="clasificados-section position-relative text-white">
     <img src="assets/img/backgrounds/bg_10.png" class="clasificados-img w-100">
-    <h1 class="clasificados-title position-absolute top-50 start-50 translate-middle display-3 fw-bold text-center">CLASIFICADOS
+    <h1 class="clasificados-title position-absolute top-50 start-50 translate-middle display-3 fw-bold text-center">
+        CLASIFICADOS
     </h1>
 </section>
 
@@ -57,9 +58,12 @@
                     <h3>Categorías</h3>
                     <div class="tags">
                         @for (tag of allTags; track tag) {
-                        <span>{{ tag }}</span>
+                        <span (click)="filtrarPorCategoria(tag)" [class.active-tag]="tag === categoriaSeleccionada">
+                            {{ tag }}
+                        </span>
                         }
                     </div>
+
                 </div>
                 <div class="section">
                     <h3>Contacto</h3>

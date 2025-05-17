@@ -164,7 +164,7 @@
 .btn-contact:hover {
     background: var(--color-principal-claro);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page-btn:hover:not(.active) {
@@ -176,6 +176,27 @@
     color: white;
     border-color: var(--color-principal);
 }
+
+.tags span {
+    display: inline-block;
+    background: #ddd;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tags span:hover {
+    background: #bbb;
+}
+
+.tags span.active-tag {
+    background: var(--color-principal);
+    color: #fff;
+}
+
 
 @media (max-width: 992px) {
     .content-wrapper {

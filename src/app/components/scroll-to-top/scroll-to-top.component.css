@@ -7,7 +7,7 @@
     cursor: pointer;
     opacity: 0;
     transition: opacity 0.3s;
-    z-index: 1000;
+    z-index: 51;
 }
 
 .scroll-to-top.visible {
@@ -15,10 +15,13 @@
 }
 
 .scroll-progress {
-    stroke: #228B22 !important;
-    stroke-linecap: round; 
+  stroke: var(--color-principal-claro);
+  stroke-linecap: round;
 }
 
+.scroll-track {
+  stroke: #A8D5A2;
+}
 .scroll-arrow {
-    fill: #228B22 !important;
+    fill: var(--color-principal-claro) !important;
 }

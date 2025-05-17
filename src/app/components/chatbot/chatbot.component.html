@@ -1,0 +1,98 @@
+<section class="chatbot">
+    <div class="chatbot-container" [class.open]="isOpen">
+        @if (!isOpen) {
+        <div class="chatbot-button position-relative" (click)="toggleOptions()">
+            @if (!showOptions) {
+            <span><i class="bi bi-chat-dots-fill fs-4"></i></span>
+            } @else {
+            <span><i class="bi bi-x-lg fs-5"></i></span>
+            }
+
+            @if (showOptions) {
+            <div class="hover-options position-absolute d-flex gap-2">
+                <a href="https://wa.me/573115019158" target="_blank">
+                    <i class="bi bi-whatsapp me-2"></i> WhatsApp
+                </a>
+                <button (click)="toggleChat(); $event.stopPropagation()">
+                    <i class="bi bi-chat-left-text me-2"></i> Iniciar Chat
+                </button>
+            </div>
+            }
+        </div>
+        }
+
+        @if (isOpen) {
+        <div class="chat-window d-flex flex-column shadow rounded-4">
+            <div class="chat-header d-flex align-items-center p-3">
+                <img src="./assets/img/logos/logo-coonadoc.png" alt="logo" class="avatar me-2" />
+                <span class="flex-grow-1">Pepita Pérez</span>
+                <button class="btn-close btn-close-white" (click)="toggleChat()"></button>
+            </div>
+
+            <div class="chat-messages flex-grow-1 p-3">
+                @for (msg of messages; track msg) {
+                <div
+                    class="message-wrapper d-flex {{ msg.sender === 'bot' ? 'justify-content-start' : 'justify-content-end' }} mb-3">
+                    @if (msg.sender === 'bot') {
+                    <i class="bi bi-robot fs-5 me-2 align-self-end"></i>
+                    }
+                    <div class="bubble">
+                        <span class="text d-block">{{ msg.text }}</span>
+                        <span class="time d-block text-end">{{ msg.time }}</span>
+                    </div>
+                    @if (msg.sender === 'user') {
+                    <i class="bi bi-person fs-5 ms-2 align-self-end"></i>
+                    }
+                </div>
+
+                @if (msg.sender === 'bot' && msg.options && !msg.optionSelected) {
+                <div class="message-wrapper d-flex justify-content-end mb-3">
+                    <div class="bubble options-bubble">
+                        <div class="options-container">
+                            @if (currentFormStep === 'tipoCredito' || currentFormStep === 'profesion') {
+                            @for (option of msg.options; track trackOption($index, option)) {
+                            <button class="option-button text-white" (click)="selectOptionInForm(option)">
+                                {{ option }}
+                            </button>
+                            }
+                            } @else {
+                            @for (option of msg.options; track trackOption($index, option)) {
+                            <button class="option-button text-white" (click)="selectOption(msg, option)">
+                                {{ option }}
+                            </button>
+                            }
+                            }
+                        </div>
+                    </div>
+                    <i class="bi bi-person fs-5 ms-2 align-self-end"></i>
+                </div>
+                }
+
+                }
+                @if (currentFormStep && currentFormStep !== 'tipoCredito' && currentFormStep !== 'profesion') {
+                <div class="chat-input p-3 border-top">
+                    <form (submit)="handleUserInput()">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Escribe aquí..."
+                                [(ngModel)]="userInput" name="userInput" required autofocus />
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+                }
+
+                @if (isTyping) {
+                <div class="typing d-flex align-items-center">
+                    <i class="bi bi-robot fs-5 me-2"></i>
+                    <div class="dots d-flex gap-2">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</section>

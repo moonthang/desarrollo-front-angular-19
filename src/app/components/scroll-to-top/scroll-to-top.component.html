@@ -1,9 +1,8 @@
 <div class="scroll-to-top" (click)="scrollToTop()">
     <svg class="scroll-top-inner" viewBox="-1 -1 102 102">
-        <path class="scroll-progress" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" fill="none" stroke="#228B22 !important"
-            stroke-width="2" [attr.stroke-dasharray]="pathLength" [attr.stroke-dashoffset]="pathLength - progress" />
-        <path class="scroll-border" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" fill="none" stroke="#e0e0e0"
-            stroke-width="2" />
-        <path class="scroll-arrow" d="M50 30 L35 50 L65 50 Z" fill="#228B22" />
+        <path class="scroll-track" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" fill="none" stroke-width="5" />
+        <path class="scroll-progress" d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" fill="none" stroke-width="2"
+            [attr.stroke-dasharray]="pathLength" [attr.stroke-dashoffset]="pathLength - progress" />
+        <path class="scroll-arrow" d="M50 30 L35 50 L65 50 Z" />
     </svg>
 </div>
